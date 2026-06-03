@@ -1,27 +1,503 @@
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Producto recibido</title>
 </head>
+
 <body style="margin:0; padding:0; background-color:#f4f2ef;">
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f4f2ef;">
-    <tr><td align="center">
-      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:600px; margin:0 auto;">
-        <tr><td style="background-color:#21457a; padding:22px 24px;"><table role="presentation" width="100%"><tr><td align="left"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png" alt="Venus" width="98" style="display:block; width:98px; height:auto; border:0;"></td><td align="right" style="font-family:Arial, sans-serif; font-size:12px; line-height:18px; color:#b9c6de;">Calzado ecuatoriano desde 1938</td></tr></table></td></tr>
-        <tr><td align="center" style="background-color:#11254f; padding:36px 24px 32px 24px;"><div style="display:inline-block; border-radius:999px; background-color:#4b4330; border:1px solid #d6a32f; padding:8px 16px; font-family:Arial, sans-serif; font-size:14px; line-height:14px; color:#ffd15a;">&bull;<span style="padding-left:6px;">En validaci&oacute;n</span></div><div style="height:18px; line-height:18px; font-size:18px;">&nbsp;</div><div style="font-family:Arial, sans-serif; font-size:21px; line-height:30px; font-weight:700; color:#ffffff;">Recibimos tu calzado, {{ params.customer.name }}</div><div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div><div style="font-family:Arial, sans-serif; font-size:15px; line-height:24px; color:#c6d2e5;">Tu producto lleg&oacute; a nuestra bodega y est&aacute; siendo revisado por el equipo de Calidad.</div><div style="height:18px; line-height:18px; font-size:18px;">&nbsp;</div><div style="display:inline-block; border-radius:999px; background-color:#394969; border:1px solid #7382a4; padding:12px 18px; font-family:Arial, sans-serif; font-size:14px; line-height:18px; color:#ffffff;">Solicitud {{ params.rma.increment_id }}</div></td></tr>
-        <tr><td style="padding:30px 20px 18px 20px;"><div style="background-color:#eaf3ff; border:1px solid #b6d2ff; border-radius:12px; padding:18px; font-family:Arial, sans-serif;"><div style="font-size:14px; line-height:22px; font-weight:700; color:#2b55c7;">Recibimos tu producto en nuestro punto de recepci&oacute;n</div><div style="font-size:14px; line-height:22px; color:#2f4b7c;">Tu producto fue recibido y ahora continuamos con la validaci&oacute;n correspondiente en bodega.</div></div></td></tr>
-        <tr><td style="padding:0 20px 18px 20px;"><div style="font-family:Arial, sans-serif; font-size:14px; line-height:20px; font-weight:700; color:#ff295f; padding-bottom:10px;">Estado de tu solicitud</div><div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="font-family:Arial, sans-serif;"><tr><td style="padding:16px 18px; border-bottom:1px solid #efe7dc;"><table role="presentation" width="100%"><tr><td width="36"><div style="width:26px; height:26px; border-radius:26px; background-color:#1dbb85; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#ffffff;">&#10003;</div></td><td><div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">Solicitud aprobada</div><div style="font-size:14px; line-height:20px; color:#6f7787;">Tu solicitud fue aprobada.</div></td></tr></table></td></tr><tr><td style="padding:16px 18px; border-bottom:1px solid #efe7dc;"><table role="presentation" width="100%"><tr><td width="36"><div style="width:26px; height:26px; border-radius:26px; background-color:#1dbb85; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#ffffff;">&#10003;</div></td><td><div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">Producto recibido</div><div style="font-size:14px; line-height:20px; color:#6f7787;">Recibimos el paquete correctamente.</div></td></tr></table></td></tr><tr><td style="padding:16px 18px; border-bottom:1px solid #efe7dc;"><table role="presentation" width="100%"><tr><td width="36"><div style="width:26px; height:26px; border-radius:26px; background-color:#21457a; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#ffffff;">3</div></td><td><div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">Validaci&oacute;n en bodega</div><div style="font-size:14px; line-height:20px; color:#6f7787;">El equipo de Calidad est&aacute; revisando el producto.</div></td></tr></table></td></tr><tr><td style="padding:16px 18px;"><table role="presentation" width="100%"><tr><td width="36"><div style="width:26px; height:26px; border-radius:26px; background-color:#ece8e2; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#9ca3b0;">4</div></td><td><div style="font-size:14px; line-height:20px; font-weight:700; color:#99a3b4;">Despacho del nuevo par</div><div style="font-size:14px; line-height:20px; color:#7f8695;">Te avisaremos cuando salga el despacho.</div></td></tr></table></td></tr></table></div></td></tr>
-        <tr><td style="padding:0 20px 18px 20px;"><div style="font-family:Arial, sans-serif; font-size:14px; line-height:20px; font-weight:700; color:#ff295f; padding-bottom:10px;">&iquest;Qu&eacute; pasa ahora?</div><div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px; overflow:hidden;"><div style="background-color:#21457a; padding:14px 18px; font-family:Arial, sans-serif; font-size:15px; line-height:22px; font-weight:700; color:#ffffff;">Proceso de validaci&oacute;n y despacho</div><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="font-family:Arial, sans-serif;"><tr><td style="padding:16px 18px; border-bottom:1px solid #efe7dc;"><div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">Recepci&oacute;n confirmada</div><div style="font-size:14px; line-height:20px; color:#6f7787;">Tu paquete ya lleg&oacute; a bodega.</div></td></tr><tr><td style="padding:16px 18px; border-bottom:1px solid #efe7dc;"><div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">Validaci&oacute;n de Calidad</div><div style="font-size:14px; line-height:20px; color:#6f7787;">Revisamos que el producto llegue en condiciones adecuadas.</div></td></tr><tr><td style="padding:16px 18px;"><div style="font-size:14px; line-height:20px; font-weight:700; color:#99a3b4;">Despacho del nuevo par</div><div style="font-size:14px; line-height:20px; color:#7f8695;">Cuando finalice la validaci&oacute;n, prepararemos el nuevo env&iacute;o.</div></td></tr></table></div></td></tr>
-        <tr><td style="padding:0 20px 18px 20px;"><div style="font-family:Arial, sans-serif; font-size:14px; line-height:20px; font-weight:700; color:#ff295f; padding-bottom:10px;">Productos en proceso de cambio</div><div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px;">{% for item in params.items %}<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="padding:14px 16px; border-bottom:{% if not forloop.last %}1px solid #efe7dc{% else %}0{% endif %};"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="56" valign="top"><div style="width:46px; height:46px; border-radius:8px; background-color:#f4f1ec;"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe12f647b9790e32f53e21.png" alt="Producto" width="24" style="display:block; width:24px; height:auto; border:0; margin:11px auto 0 auto;"></div></td><td valign="top" style="font-family:Arial, sans-serif; padding-right:10px;"><div style="font-size:13px; line-height:19px; font-weight:700; color:#1f2d4d;">{{ item.name }}</div><div style="font-size:13px; line-height:18px; color:#7a7f8d;">SKU: {{ item.sku }} · Cantidad: {{ item.qty }}</div><div style="font-size:13px; line-height:18px; color:#7a7f8d;">Motivo: {{ item.reason_label }}</div></td><td width="74" valign="top" align="right" style="font-family:Arial, sans-serif; font-size:13px; line-height:19px; font-weight:700; color:#1f2d4d;">${{ item.price|floatformat:2 }}</td></tr></table></td></tr></table>{% endfor %}</div></td></tr>
-        <tr><td style="padding:0 20px 22px 20px;"><div style="font-family:Arial, sans-serif; font-size:14px; line-height:20px; font-weight:700; color:#ff295f; padding-bottom:10px;">Resumen de la solicitud</div><div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="font-family:Arial, sans-serif;"><tr><td style="padding:14px 18px; border-bottom:1px solid #efe7dc; color:#7a7f8d;">N&uacute;mero de solicitud</td><td align="right" style="padding:14px 18px; border-bottom:1px solid #efe7dc; font-weight:700; color:#1f2d4d;">{{ params.rma.increment_id }}</td></tr><tr><td style="padding:14px 18px; border-bottom:1px solid #efe7dc; color:#7a7f8d;">Pedido origen</td><td align="right" style="padding:14px 18px; border-bottom:1px solid #efe7dc; font-weight:700; color:#1f2d4d;">{{ params.order.increment_id }}</td></tr><tr><td style="padding:14px 18px; border-bottom:1px solid #efe7dc; color:#7a7f8d;">Estado</td><td align="right" style="padding:14px 18px; border-bottom:1px solid #efe7dc; font-weight:700; color:#1f2d4d;">En validaci&oacute;n</td></tr><tr><td style="padding:14px 18px; color:#7a7f8d;">Proceso</td><td align="right" style="padding:14px 18px; font-weight:700; color:#1f2d4d;">Revisi&oacute;n de Calidad</td></tr></table></div></td></tr>
-        <tr><td style="padding:0 20px 32px 20px;"><div style="background-color:#11254f; border-radius:12px; padding:18px; font-family:Arial, sans-serif; font-size:15px; line-height:24px; color:#c6d2e5;"><span style="color:#ff295f; font-weight:700;">Te avisamos cuando est&eacute; en camino.</span> Recibir&aacute;s otro correo en cuanto el nuevo par sea despachado.</div></td></tr>
-        <tr><td style="padding:0 20px 34px 20px;"><div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px; padding:18px; font-family:Arial, sans-serif; text-align:center; font-size:14px; line-height:24px; color:#4c5567;">&iquest;Tienes dudas sobre el proceso? Estamos aqu&iacute; para ayudarte.<br><a href="mailto:venus@plasticaucho.com" style="color:#21457a; text-decoration:none;">venus@plasticaucho.com</a> &nbsp; | &nbsp; <a href="tel:035003000" style="color:#21457a; text-decoration:none;">03 500 3000</a></div></td></tr>
-        <tr><td align="center" style="background-color:#11254f; padding:30px 20px 34px 20px;"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png" alt="Venus" width="102" style="display:block; width:102px; height:auto; border:0; margin:0 auto;"><div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div><div style="font-family:Arial, sans-serif; font-size:13px; line-height:22px; color:#97a8c7;">Calzado ecuatoriano desde 1938</div></td></tr>
-      </table>
-    </td></tr>
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+          style="max-width:600px; margin:0 auto;">
+          <tr>
+            <td style="background-color:#21457a; padding:22px 24px;">
+              <table role="presentation" width="100%">
+                <tr>
+                  <td align="left"><img
+                      src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
+                      alt="Venus" width="98" style="display:block; width:98px; height:auto; border:0;"></td>
+                  <td align="right"
+                    style="font-family:Arial, sans-serif; font-size:12px; line-height:18px; color:#b9c6de;">Calzado
+                    ecuatoriano desde 1938</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="background-color:#11254f; padding:36px 24px 32px 24px;">
+              <div
+                style="display:inline-block; border-radius:999px; background-color:#4b4330; border:1px solid #d6a32f; padding:8px 16px; font-family:Arial, sans-serif; font-size:14px; line-height:14px; color:#ffd15a;">
+                &bull;<span style="padding-left:6px;">En validaci&oacute;n</span></div>
+              <div style="height:18px; line-height:18px; font-size:18px;">&nbsp;</div>
+              <div
+                style="font-family:Arial, sans-serif; font-size:21px; line-height:30px; font-weight:700; color:#ffffff;">
+                Recibimos tu calzado, {{ params.customer.name }}</div>
+              <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+              <div style="font-family:Arial, sans-serif; font-size:15px; line-height:24px; color:#c6d2e5;">
+                
+                Tu producto
+                ingres&oacute; a nuestra bodega y est&aacute; siendo revisado por el equipo de Calidad.
+              </div>
+              <div style="height:18px; line-height:18px; font-size:18px;">&nbsp;</div>
+              <div
+                style="display:inline-block; border-radius:999px; background-color:#394969; border:1px solid #7382a4; padding:12px 18px; font-family:Arial, sans-serif; font-size:14px; line-height:18px; color:#ffffff;">
+                Solicitud {{ params.rma.increment_id }} · {{ params.rma.date }}</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:30px 20px 18px 20px;">
+              <div style="background-color:#eaf3ff; border:1px solid #b6d2ff; border-radius:12px; padding:18px; font-family:Arial, sans-serif;">
+                {% if params.shipping_method_code == "freeshipping_freeshipping" %}
+                  <div style="font-size:14px; line-height:22px; font-weight:700; color:#2b55c7;"> 
+                    ℹ️ Calzado recibido en el Materia Prima
+                  </div>
+                  <div style="font-size:14px; line-height:22px; color:#2f4b7c;">
+                    Hemos recibido el calzado en nuestra bodega para la validación respectiva con el equipo de Calidad. Te avisaremos cuando el proceso esté listo para la generación de la nota de crédito.
+                  </div>
+                {% else %}
+                  <div style="font-size:14px; line-height:22px; font-weight:700; color:#2b55c7;"> 
+                    ℹ️ Recibimos tu producto en nuestro punto de recolección Servientrega
+                  </div>
+                  <div style="font-size:14px; line-height:22px; color:#2f4b7c;">
+                    Recibimos tu producto en nuestro punto de recolección Servientrega. Se procederá con la validación respectiva una vez arribe a nuestra bodega.
+                  </div>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 20px 18px 20px;">
+              <div
+                style="font-family:Arial, sans-serif; font-size:14px; line-height:20px; font-weight:700; color:#ff295f; padding-bottom:10px;">
+                Estado de tu solicitud</div>
+              <div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                  style="font-family:Arial, sans-serif;">
+                  <tr>
+                    <td style="padding:16px 18px; border-bottom:1px solid #efe7dc;">
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td width="36">
+                            <div
+                              style="width:26px; height:26px; border-radius:26px; background-color:#1dbb85; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#ffffff;">
+                              &#10003;</div>
+                          </td>
+                          <td>
+                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">Solicitud
+                              aprobada</div>
+                            <div style="font-size:14px; line-height:20px; color:#6f7787;">Tu solicitud de cambio N° {{params.rma.increment_id}} fue aprobada.
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  {% if params.shipping_method_code == "freeshipping_freeshipping" %}
+                  <tr>
+                    <td style="padding:16px 18px; border-bottom:1px solid #efe7dc;">
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td width="36">
+                            <div
+                              style="width:26px; height:26px; border-radius:26px; background-color:#1dbb85; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#ffffff;">
+                              &#10003;</div>
+                          </td>
+                          <td>
+                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">
+                              Calzado entregado en Materia Prima
+                            </div>
+                            <div style="font-size:14px; line-height:20px; color:#6f7787;">
+                              El calzado fue ingresado correctamente con el comprobante de aprobación.
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:16px 18px; border-bottom:1px solid #efe7dc;">
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td width="36">
+                            <div
+                              style="width:26px; height:26px; border-radius:26px; background-color:#21457a; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#ffffff;">
+                              3</div>
+                          </td>
+                          <td>
+                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">
+                              Validaci&oacute;n de Calidad</div>
+                            <div style="font-size:14px; line-height:20px; color:#6f7787;">
+                              El equipo de Calidad está revisando el calzado. Este proceso puede tomar hasta <strong>1 día hábil</strong>.
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:16px 18px;">
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td width="36">
+                            <div
+                              style="width:26px; height:26px; border-radius:26px; background-color:#ece8e2; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#9ca3b0;">
+                              4</div>
+                          </td>
+                          <td>
+                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#99a3b4;">
+                              Retiro del nuevo par
+                            </div>
+                            <div style="font-size:14px; line-height:20px; color:#7f8695;">
+                              Una vez validado y emitida la nueva factura, podrás retirar tu nuevo par en Materia Prima.
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  {% else %}
+                  <tr>
+                    <td style="padding:16px 18px; border-bottom:1px solid #efe7dc;">
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td width="36">
+                            <div
+                              style="width:26px; height:26px; border-radius:26px; background-color:#1dbb85; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#ffffff;">
+                              &#10003;</div>
+                          </td>
+                          <td>
+                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">
+                              Calzado enviado por Servientrega  
+                            </div>
+                            <div style="font-size:14px; line-height:20px; color:#6f7787;">
+                              La guía fue usada correctamente y el paquete fue recibido.
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:16px 18px; border-bottom:1px solid #efe7dc;">
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td width="36">
+                            <div
+                              style="width:26px; height:26px; border-radius:26px; background-color:#21457a; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#ffffff;">
+                              3</div>
+                          </td>
+                          <td>
+                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">
+                              Validaci&oacute;n en bodega</div>
+                            <div style="font-size:14px; line-height:20px; color:#6f7787;">
+                              El calzado está siendo revisado por el equipo de Calidad. Este proceso puede tomar hasta 1 día hábil.
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:16px 18px;">
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td width="36">
+                            <div
+                              style="width:26px; height:26px; border-radius:26px; background-color:#ece8e2; text-align:center; font-size:13px; line-height:26px; font-weight:700; color:#9ca3b0;">
+                              4</div>
+                          </td>
+                          <td>
+                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#99a3b4;">
+                              Despacho del nuevo par</div>
+                            <div style="font-size:14px; line-height:20px; color:#7f8695;">
+                              Una vez validado, emitiremos la nueva factura y despacharemos tu pedido.
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 20px 18px 20px;">
+              <div
+                style="font-family:Arial, sans-serif; font-size:14px; line-height:20px; font-weight:700; color:#ff295f; padding-bottom:10px;">
+                &iquest;Qu&eacute; pasa ahora?</div>
+              <div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px; overflow:hidden;">
+                <div
+                  style="background-color:#21457a; padding:14px 18px; font-family:Arial, sans-serif; font-size:15px; line-height:22px; font-weight:700; color:#ffffff;">
+                  ⏱ Proceso de validaci&oacute;n y despacho</div>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+	                  style="font-family:Arial, sans-serif;">
+	                  <tr>
+	                    <td style="padding:16px 18px; border-bottom:1px solid #efe7dc;">
+	                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+	                        <tr>
+	                          <td width="48" valign="top">
+	                            <div
+	                              style="line-height: 32px; width:32px; height:32px; border-radius:32px; background-color:#d7f8e6; text-align:center; color: #1dbb85; font-size: 20px;">
+	                              ✓
+	                            </div>
+	                          </td>
+	                          <td valign="top">
+	                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">Recepci&oacute;n
+	                              confirmada</div>
+	                            <div style="font-size:14px; line-height:20px; color:#6f7787;">Tu paquete ya lleg&oacute; a bodega.
+	                            </div>
+	                          </td>
+	                        </tr>
+	                      </table>
+	                    </td>
+	                  </tr>
+	                  <tr>
+	                    <td style="padding:16px 18px; border-bottom:1px solid #efe7dc;">
+	                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+	                        <tr>
+	                          <td width="48" valign="top">
+	                            <div
+	                              style="width:32px; height:32px; border-radius:32px; background-color:#eaf3ff; text-align:center; color: #2b55c7; font-size: 20px; line-height: 32px;">
+	                              ⏱
+	                            </div>
+	                          </td>
+	                          <td valign="top">
+	                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">Validaci&oacute;n
+	                              de Calidad</div>
+	                            <div style="font-size:14px; line-height:20px; color:#6f7787;">Revisamos que el producto llegue en
+	                              condiciones adecuadas.</div>
+	                          </td>
+	                        </tr>
+	                      </table>
+	                    </td>
+	                  </tr>
+	                  <tr>
+	                    <td style="padding:16px 18px;">
+	                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+	                        <tr>
+	                          <td width="48" valign="top">
+	                            <div
+	                              style="font-size: 18px;line-height: 32px;color: #7382a4; width:32px; height:32px; border-radius:32px; background-color:#f2f4f7; text-align:center;">
+	                              ⛟
+	                            </div>
+	                          </td>
+	                          <td valign="top">
+	                            <div style="font-size:14px; line-height:20px; font-weight:700; color:#99a3b4;">Despacho del nuevo
+	                              par</div>
+	                            <div style="font-size:14px; line-height:20px; color:#7f8695;">Cuando finalice la
+	                              validaci&oacute;n, prepararemos el nuevo env&iacute;o.</div>
+	                          </td>
+	                        </tr>
+	                      </table>
+	                    </td>
+	                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 20px 18px 20px;">
+              <div
+                style="font-family:Arial, sans-serif; font-size:14px; line-height:20px; font-weight:700; color:#ff295f; padding-bottom:10px;">
+                Productos de tu solicitud
+              </div>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td>
+                    <div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px;">
+                      {% for item in params.items %}
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td
+                            style="padding:14px 16px; border-bottom:{% if not forloop.last %}1px solid #efe7dc{% else %}0{% endif %};">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td width="56" valign="top">
+                                  <div
+                                    style="width:46px; height:46px; border-radius:8px; background-color:#f4f1ec; text-align:center;">
+                                    {% if item.url %}
+                                    <a href="{{ item.url }}" target="_blank" style="text-decoration:none;">
+                                      {% endif %}
+                                      <img src="{{ item.image_url }}" alt="{{ item.name }}" width="24"
+                                        style="display:block; width:24px; height:auto; border:0; margin:11px auto 0 auto;">
+                                      {% if item.url %}
+                                    </a>
+                                    {% endif %}
+                                  </div>
+                                </td>
+                                <td valign="top" style="font-family:Arial, sans-serif; padding-right:10px;">
+                                  <div style="font-size:13px; line-height:19px; font-weight:700; color:#1f2d4d;">
+                                    {% if item.url %}
+                                    <a href="{{ item.url }}" target="_blank"
+                                      style="color:#1f2d4d; text-decoration:none;">
+                                      {% endif %}
+                                      {{ item.name }}
+                                      {% if item.url %}
+                                    </a>
+                                    {% endif %}
+                                  </div>
+                                  <div style="font-size:13px; line-height:18px; color:#7a7f8d;">SKU: {{ item.sku }} ·
+                                    Cantidad: {{ item.qty }}</div>
+                                  <div style="font-size:13px; line-height:18px; color:#7a7f8d;">Motivo: {{
+                                    item.reason_label }}</div>
+                                </td>
+                                <td width="74" valign="top" align="right"
+                                  style="font-family:Arial, sans-serif; font-size:13px; line-height:19px; font-weight:700; color:#1f2d4d;">
+                                  ${{ item.price|floatformat:2 }}
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      {% endfor %}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 20px 24px 20px;">
+              <div
+                style="font-family:Arial, sans-serif; font-size:14px; line-height:20px; font-weight:700; color:#ff295f; padding-bottom:10px;">
+                Resumen
+              </div>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td>
+                    <div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px;">
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                        style="font-family:Arial, sans-serif;">
+                        <tr>
+                          <td
+                            style="padding:14px 18px; border-bottom:1px solid #efe7dc; font-size:14px; line-height:20px; color:#7a7f8d;">
+                            N&uacute;mero de solicitud</td>
+                          <td align="right"
+                            style="padding:14px 18px; border-bottom:1px solid #efe7dc; font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">
+                            #{{ params.rma.increment_id }}</td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="padding:14px 18px; border-bottom:1px solid #efe7dc; font-size:14px; line-height:20px; color:#7a7f8d;">
+                            Pedido origen</td>
+                          <td align="right"
+                            style="padding:14px 18px; border-bottom:1px solid #efe7dc; font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">
+                            #{{ params.order.increment_id }}</td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="padding:14px 18px; border-bottom:1px solid #efe7dc; font-size:14px; line-height:20px; color:#7a7f8d;">
+                            Fecha</td>
+                          <td align="right"
+                            style="padding:14px 18px; border-bottom:1px solid #efe7dc; font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">
+                            {{ params.rma.date }}</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:14px 18px; font-size:14px; line-height:20px; color:#7a7f8d;">Tipo</td>
+                          <td align="right"
+                            style="padding:14px 18px; font-size:14px; line-height:20px; font-weight:700; color:#1f2d4d;">
+                            {% for item in params.items %}
+                            <div>{{ item.reason_label }}</div>
+                            {% endfor %}
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 20px 32px 20px;">
+              <div style="background-color:#11254f; border-radius:12px; padding:18px; font-family:Arial, sans-serif; font-size:15px; line-height:24px; color:#c6d2e5;">
+                {% if params.shipping_method_code == "freeshipping_freeshipping" %}
+                  <span style="color:#ffd15a; font-weight:700;">Te avisamos cuando est&eacute; listo.</span>
+                  Recibirás un correo en cuanto la nueva factura sea emitida y puedas acercarte a Materia Prima a retirar tu nuevo par.
+                {% else %}
+                  <span style="color:#ff295f; font-weight:700;">Te avisamos cuando est&eacute; en camino.</span>
+                  Recibirás un correo en cuanto tu nuevo par sea despachado con los datos de seguimiento.
+                {% endif %}
+                </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 20px 32px 20px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td>
+                    <div style="background-color:#ffffff; border:1px solid #e6ddd2; border-radius:12px; padding:18px;">
+                      <div
+                        style="font-family:Arial, sans-serif; font-size:14px; line-height:24px; color:#6f7787; text-align:center;">
+                        &iquest;Tienes dudas sobre tu solicitud? Estamos aqu&iacute;.
+                      </div>
+                      <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td align="center"
+                            style="font-family:Arial, sans-serif; font-size:12px; line-height:22px; color:#21457a;">
+                            <a href="mailto:venus@plasticaucho.com"
+                              style="color:#21457a; text-decoration:none; white-space: nowrap;">✉️
+                              venus@plasticaucho.com</a>
+                          </td>
+                          <td align="center"
+                            style="font-family:Arial, sans-serif; font-size:12px; line-height:22px; color:#21457a;">
+                            <a href="http://wa.me/593987031150"
+                              style="color:#21457a; text-decoration:none; white-space: nowrap;">💬 WhatsApp 098 703
+                              1150</a>
+                          </td>
+                          <td align="center"
+                            style="font-family:Arial, sans-serif; font-size:12px; line-height:22px; color:#21457a;">
+                            <a href="tel:035003000" style="color:#21457a; text-decoration:none; white-space: nowrap;">📞
+                              03 500 3000</a>
+                          </td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color:#11254f; padding:30px 20px 34px 20px;" align="center">
+              <img
+                src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
+                alt="Venus" width="102" style="display:block; width:102px; height:auto; border:0; margin:0 auto;">
+              <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+              <div style="font-family:Arial, sans-serif; font-size:13px; line-height:22px; color:#97a8c7;">
+                Calzado ecuatoriano desde 1938
+              </div>
+              <div style="height:14px; line-height:14px; font-size:14px;">&nbsp;</div>
+              <div style="font-family:Arial, sans-serif; font-size:12px; line-height:22px; color:#97a8c7;">
+                Pol&iacute;tica de privacidad &nbsp;&nbsp; Pol&iacute;tica de devoluciones &nbsp;&nbsp; T&eacute;rminos
+                de compra
+              </div>
+              <div style="font-family:Arial, sans-serif; font-size:12px; line-height:22px; color:#97a8c7;">
+                Parque Industrial 4ta. Etapa, Panamericana Norte Km. 10
+              </div>
+              <div style="font-family:Arial, sans-serif; font-size:12px; line-height:22px; color:#97a8c7;">
+                venus@plasticaucho.com · venus.com.ec
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
   </table>
 </body>
 </html>
