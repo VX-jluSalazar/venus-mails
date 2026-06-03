@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>¡Tu pedido fue entregado! - Venus</title>
+  
+  <style type="text/css">
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; display: block; }
+    body { margin: 0 !important; padding: 0 !important; background-color: #f0f2f5; width: 100% !important; min-width: 100%; }
+    a { color: inherit; }
+    .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; }
+    .ExternalClass * { line-height: 100%; }
+
+    @media only screen and (max-width: 620px) {
+      .email-container { width: 100% !important; }
+      .hero-pad { padding: 32px 20px 40px !important; }
+      .body-pad { padding: 28px 20px !important; }
+      .footer-pad { padding: 32px 20px 24px !important; }
+      .product-img-cell { display: none !important; }
+      .review-cta-cell { display: block !important; width: 100% !important; padding: 0 14px 14px !important; text-align: left !important; }
+      .review-info-cell { display: block !important; width: 100% !important; }
+      .progress-label { font-size: 10px !important; }
+      .hero-title { font-size: 22px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background-color:#f0f2f5;width:100%;">
+
+<div style="display:none;font-size:1px;color:#f0f2f5;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
+  Pedido #{{ params.order.entity_id }} entregado · Gracias por confiar en Venus
+</div>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f0f2f5;">
+<tr>
+<td align="center" style="padding:24px 12px;">
+
+<table class="email-container" width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="max-width:600px;width:100%;">
+
+  <tr>
+    <td style="background-color:#193C6B;border-radius:12px 12px 0 0;padding:18px 32px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td valign="middle">
+            <a href="{{ params.order.order_url }}" style="text-decoration:none;display:inline-block;">
+              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
+                   alt="Venus"
+                   width="110"
+                  
+                   style="display:block;border:0;height:auto;max-height:36px;width:auto;" />
+            </a>
+          </td>
+          <td align="right" valign="middle" style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.60);">
+            Calzado ecuatoriano desde 1938
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="hero-pad" style="background-color:#193C6B;padding:44px 32px 48px;text-align:center;">
+      <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 18px;">
+        <tr>
+          <td>
+            <div style="background-color:rgba(34,197,94,0.20);border:1.5px solid rgba(34,197,94,0.45);border-radius:24px;padding:8px 20px;">
+            <span style="display:inline-block;width:8px;height:8px;background-color:#34d399;border-radius:50%;margin-right:8px;vertical-align:middle;"></span>
+            <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#86efac;vertical-align:middle;">
+              Pedido completado
+            </span>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 20px;">
+        <tr>
+          <td width="64" height="64" align="center" valign="middle"
+              style="width:64px;height:64px;background-color:#E0004D;border-radius:50%;">
+            <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png"
+                 alt="Pedido entregado"
+                 width="30"
+                 height="30"
+                 style="display:block;margin:0 auto;" />
+          </td>
+        </tr>
+      </table>
+
+      <h1 class="hero-title" style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:26px;font-weight:700;margin:0 0 14px;line-height:1.2;">
+        ¡Tu pedido fue<br />entregado, {{ params.customer.first_name }}!
+      </h1>
+
+      <p style="color:rgba(255,255,255,0.80);font-family:Arial,Helvetica,sans-serif;font-size:15px;margin:0 auto 26px;line-height:1.6;max-width:420px;">
+        Esperamos que estés disfrutando tu nuevo calzado.<br />
+        ¡Gracias por confiar en Venus!
+      </p>
+
+      <table cellpadding="0" cellspacing="0" border="0" align="center">
+        <tr>
+          <td>
+            <div style="background-color:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:24px;padding:10px 24px;">
+            <span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;">
+              Pedido #{{ params.order.entity_id }} &middot; Completado
+            </span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="body-pad" style="background-color:#ffffff;padding:36px 32px;">
+
+      <p style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 18px;">
+        Estado de tu pedido
+      </p>
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:32px;">
+        <tr>
+          <td width="19%" align="center" valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" align="center">
+              <tr><td width="38" height="38" align="center" valign="middle" style="width:38px;height:38px;background-color:#193C6B;border-radius:50%;">
+                <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png" alt="Completado" width="16" height="16" style="display:block;margin:0 auto;" />
+              </td></tr>
+            </table>
+            <p class="progress-label" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#193C6B;margin:8px 0 0;line-height:1.3;">Pedido<br />recibido</p>
+          </td>
+          <td width="4%" valign="top" style="padding-top:19px;"><div style="height:2px;background-color:#193C6B;line-height:2px;font-size:2px;">&nbsp;</div></td>
+          <td width="19%" align="center" valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" align="center">
+              <tr><td width="38" height="38" align="center" valign="middle" style="width:38px;height:38px;background-color:#193C6B;border-radius:50%;">
+                <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png" alt="Completado" width="16" height="16" style="display:block;margin:0 auto;" />
+              </td></tr>
+            </table>
+            <p class="progress-label" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#193C6B;margin:8px 0 0;line-height:1.3;">Pago<br />confirmado</p>
+          </td>
+          <td width="4%" valign="top" style="padding-top:19px;"><div style="height:2px;background-color:#193C6B;line-height:2px;font-size:2px;">&nbsp;</div></td>
+          <td width="19%" align="center" valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" align="center">
+              <tr><td width="38" height="38" align="center" valign="middle" style="width:38px;height:38px;background-color:#193C6B;border-radius:50%;">
+                <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png" alt="Completado" width="16" height="16" style="display:block;margin:0 auto;" />
+              </td></tr>
+            </table>
+            <p class="progress-label" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#193C6B;margin:8px 0 0;line-height:1.3;">Preparado</p>
+          </td>
+          <td width="4%" valign="top" style="padding-top:19px;"><div style="height:2px;background-color:#193C6B;line-height:2px;font-size:2px;">&nbsp;</div></td>
+          <td width="19%" align="center" valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" align="center">
+              <tr><td width="38" height="38" align="center" valign="middle" style="width:38px;height:38px;background-color:#193C6B;border-radius:50%;">
+                <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png" alt="Completado" width="16" height="16" style="display:block;margin:0 auto;" />
+              </td></tr>
+            </table>
+            <p class="progress-label" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#193C6B;margin:8px 0 0;line-height:1.3;">Enviado</p>
+          </td>
+          <td width="4%" valign="top" style="padding-top:19px;"><div style="height:2px;background-color:#E0004D;line-height:2px;font-size:2px;">&nbsp;</div></td>
+          <td width="12%" align="center" valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" align="center">
+              <tr><td width="38" height="38" align="center" valign="middle" style="width:38px;height:38px;background-color:#E0004D;border-radius:50%;">
+                <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png" alt="Entregado" width="16" height="16" style="display:block;margin:0 auto;" />
+              </td></tr>
+            </table>
+            <p class="progress-label" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#E0004D;margin:8px 0 0;line-height:1.3;">Entregado</p>
+          </td>
+        </tr>
+      </table>
+
+      <p style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
+        Escribe una reseña
+      </p>
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:32px;">
+        {% for item in params.items %}
+        <tr>
+          <td style="padding:0 0 12px 0;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #e5e7eb;border-radius:10px;background-color:#ffffff;overflow:hidden;">
+              <tr>
+                <td class="product-img-cell" width="82" valign="top" style="padding:14px 0 14px 14px;vertical-align:top;">
+                  <img src="{{ item.image_url }}"
+                       alt="{% if item.parent_name %}{{ item.parent_name }}{% else %}{{ item.name }}{% endif %}"
+                       width="64" height="64"
+                       style="border-radius:8px;object-fit:cover;background-color:#f9fafb;display:block;border:0;" />
+                </td>
+                <td class="review-info-cell" valign="top" style="padding:14px 12px;vertical-align:top;">
+                  <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#111827;margin:0 0 4px;line-height:1.3;">
+                    {% if item.parent_name %}{{ item.parent_name }}{% else %}{{ item.name }}{% endif %}
+                  </p>
+                  <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;margin:0;line-height:1.5;">
+                    {% for variation in item.variations %}{% if variation.value %}{{ variation.label }}: {{ variation.value }}&nbsp;&nbsp;{% endif %}{% endfor %}<br />
+                    Cant: {{ item.qty|floatformat:0 }}
+                  </p>
+                </td>
+                <td class="review-cta-cell" width="150" align="right" valign="middle" style="padding:14px;vertical-align:middle;white-space:nowrap;">
+                  <a href="{{ item.url }}"
+                     style="display:inline-block;background-color:#E0004D;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;padding:11px 18px;border-radius:24px;text-decoration:none;">
+                    Escribir reseña &rarr;
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td>
+            <div style="padding:28px 24px;text-align:center; border:1px solid #e5e7eb;border-radius:12px;margin-bottom:28px;">
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:800;color:#111827;margin:0 0 10px;">¿Recomendarías Venus a un amigo?</p>
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#6b7280;margin:0 0 20px;line-height:1.6;">
+              Tu opinión nos ayuda a mejorar.<br />La encuesta toma menos de 2 minutos.
+            </p>
+            <a href="{{ params.order.survey_url }}"
+               style="display:inline-block;background-color:#193C6B;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;padding:14px 32px;border-radius:50px;text-decoration:none;">
+              Completar encuesta &rarr;
+            </a>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td>
+            <div style="padding:28px 24px;text-align:center; border:1px solid #e5e7eb;border-radius:12px;margin-bottom:28px;">
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:800;color:#111827;margin:0 0 10px;">¿Listo para tu próxima compra?</p>
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#6b7280;margin:0 0 20px;line-height:1.6;">
+              Descubre las últimas novedades en calzado ecuatoriano para toda la familia.
+            </p>
+            <a href="{{ params.source }}"
+               style="display:inline-block;background-color:#E0004D;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;padding:14px 32px;border-radius:50px;text-decoration:none;">
+              Ver nueva colección &rarr;
+            </a>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Caja soporte -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td>
+            <div style="padding:28px 24px;text-align:center; border:1px solid #e5e7eb;border-radius:12px;margin-bottom:28px;">
+            <p style="font-family:'Plus Jakarta Sans',Arial,sans-serif;font-size:14px;color:#374151;margin:0 0 12px;line-height:1.6;">
+              ¿Tienes alguna pregunta sobre tu pedido?<br/>Estamos aquí para ayudarte.
+            </p>
+            <p style="margin:0 0 6px;">
+              <a href="mailto:venus@plasticaucho.com" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;font-size:13px;font-weight:400;color:#193C6B;text-decoration:none;margin:0 10px;">
+                📧 venus@plasticaucho.com
+              </a>
+              <a href="https://wa.me/593987031150" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;font-size:13px;font-weight:400;color:#193C6B;text-decoration:none;margin:0 10px;">
+                💬 WhatsApp 098 703 1150
+              </a>
+            </p>
+            <p style="margin:0;">
+              <a href="tel:+593035003000" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;font-size:13px;font-weight:500;color:#193C6B;text-decoration:none;">
+                📞 03 500 3000
+              </a>
+            </p>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+
+  <tr>
+    <td class="footer-pad" style="background-color:#0A1A3B;padding:36px 32px 28px;text-align:center;border-radius:0 0 12px 12px;">
+      <a href="{{ params.order.order_url }}" style="text-decoration:none;display:block;margin-bottom:8px;">
+        <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
+             alt="Venus" width="110"
+             style="display:block;margin:0 auto;border:0;max-height:36px;width:auto;" />
+      </a>
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.55);margin:0 0 22px;line-height:1.5;">
+        Calzado ecuatoriano desde 1938
+      </p>
+
+      <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 22px;">
+        <tr>
+          <td style="padding:0 4px;">
+            <a href="https://www.facebook.com/venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c7a289d644f86c98f.png" alt="Facebook" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+            </a>
+          </td>
+          <td style="padding:0 4px;">
+            <a href="https://www.instagram.com/venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6e.png" alt="Instagram" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+            </a>
+          </td>
+          <td style="padding:0 4px;">
+            <a href="https://www.tiktok.com/@venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6d.png" alt="TikTok" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+            </a>
+          </td>
+          <td style="padding:0 4px;">
+            <a href="https://www.youtube.com/@venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c47b9790e32f53c35.png" alt="YouTube" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+            </a>
+          </td>
+          <td style="padding:0 4px;">
+            <a href="https://twitter.com/venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6c.png" alt="X" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+            </a>
+          </td>
+        </tr>
+      </table>
+
+      <p style="margin:0 0 14px;">
+        <a href="https://venus.com.ec/privacy-policy-cookie-restriction-mode" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Política de privacidad</a>
+        &middot;
+        <a href="https://venus.com.ec/devoluciones" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Devoluciones</a>
+        &middot;
+        <a href="https://venus.com.ec/terminos-de-compra" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Términos</a>
+        &middot;
+        <a href="https://venus.com.ec/faqs" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">FAQs</a>
+        &middot;
+        <a href="https://venus.com.ec/contacto" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Contáctanos</a>
+      </p>
+
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.45);line-height:1.8;margin:0 0 16px;">
+        Parque Industrial 4ta. Etapa, Panamericana Norte Km. 10 &middot; 03 500 3000<br />
+        venus@plasticaucho.com &middot; venus.com.ec
+      </p>
+
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.40);line-height:1.8;margin:0;">
+        Recibiste este email porque tienes un pedido en venus.com.ec.<br />
+        <a href="{{ unsubscribe }}" style="color:rgba(255,255,255,0.55);text-decoration:underline;">Cancelar suscripción</a>
+      </p>
+    </td>
+  </tr>
+
+</table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

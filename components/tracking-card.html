@@ -1,0 +1,19 @@
+<p style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
+  Número de seguimiento
+</p>
+
+<div style="padding:20px 22px;border:1px solid #bbf7d0;background-color:#f0fdf4;border-radius:10px;margin-bottom:32px;">
+  <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#15803d;margin:0 0 6px;">Tu pedido ya está en camino</p>
+  <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#166534;margin:0 0 18px;line-height:1.5;">Puedes rastrear tu envio con el numero de seguimiento asignado.</p>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;border:1px solid #d1fae5;border-radius:8px;overflow:hidden;">
+    <tr>
+      <td style="padding:14px 18px;">
+        <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#6b7280;margin:0 0 4px;letter-spacing:0.5px;">Número de seguimiento</p>
+        <p style="font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:800;color:#111827;margin:0;letter-spacing:0.5px;">{% if params.shipment.tracks.0.track_number %}{{ params.shipment.tracks.0.track_number }}{% else %}000000{% endif %}</p>
+      </td>
+      <td align="right" style="padding:14px 18px;white-space:nowrap;">
+        <a href="{{ params.source }}rastrear/" style="display:inline-block;background-color:#193C6B;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;padding:10px 20px;border-radius:8px;text-decoration:none;">Rastrear &rarr;</a>
+      </td>
+    </tr>
+  </table>
+</div>

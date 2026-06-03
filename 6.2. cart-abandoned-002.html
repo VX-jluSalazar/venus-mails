@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Tu carrito sigue esperándote - Venus</title>
+  <style type="text/css">
+    body, table, td, a { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+    table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; }
+    img { -ms-interpolation-mode:bicubic; border:0; outline:none; text-decoration:none; display:block; }
+    body { margin:0 !important; padding:0 !important; width:100% !important; min-width:100%; background-color:#f0f2f5; }
+    a { color:inherit; }
+    .ExternalClass { width:100%; }
+    .ExternalClass * { line-height:100%; }
+
+    @media only screen and (max-width:620px) {
+      .email-container { width:100% !important; }
+      .header-pad { padding:18px 20px !important; }
+      .hero-pad { padding:38px 20px 42px !important; }
+      .body-pad { padding:34px 20px !important; }
+      .footer-pad { padding:32px 20px 26px !important; }
+      .hero-title { font-size:26px !important; }
+      .product-img-cell { width:74px !important; }
+      .product-img { width:64px !important; height:64px !important; }
+      .reason-icon-cell { width:48px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background-color:#f0f2f5;width:100%;">
+
+<div style="display:none;font-size:1px;color:#f0f2f5;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+  Tu carrito sigue reservado, pero el stock es limitado. Recupera tu compra en Venus.
+</div>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f0f2f5;">
+<tr>
+<td align="center" style="padding:24px 12px;">
+
+<table class="email-container" width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="width:100%;max-width:600px;">
+
+  <tr>
+    <td class="header-pad" style="background-color:#193C6B;padding:18px 40px;border-radius:12px 12px 0 0;"">
+      <div style="border-radius:12px 12px 0 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td valign="middle">
+            <a href="{% if params.customer.url %}{{ params.customer.url }}{% else %}{{ params.source }}{% endif %}" style="display:inline-block;text-decoration:none;">
+              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png" alt="Venus" width="110" style="width:110px;height:auto;" />
+            </a>
+          </td>
+          <td align="right" valign="middle" style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.62);">
+            Calzado ecuatoriano desde 1938
+          </td>
+        </tr>
+      </table>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="hero-pad" style="background-color:#0A1A3B;padding:50px 40px;text-align:center;">
+      <div style="display:inline-block;border:1px solid rgba(224,0,77,0.65);background-color:rgba(224,0,77,0.13);border-radius:18px;padding:6px 18px;margin:0 auto 22px;">
+        <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;letter-spacing:1.2px;color:#ff4d8a;text-transform:uppercase;">⏰ 24 horas después</span>
+      </div>
+      <h1 class="hero-title" style="font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:800;color:#ffffff;line-height:1.13;margin:0 0 18px;">
+        Tu carrito sigue<br />esperándote, {{ params.customer.first_name }}
+      </h1>
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:16px;color:rgba(255,255,255,0.76);line-height:1.55;margin:0 auto 28px;max-width:420px;">
+        No queremos que te quedes sin tu calzado favorito.<br />El stock es limitado y otros están mirando lo mismo.
+      </p>
+      <a href="{% if params.customer.url %}{{ params.customer.url }}{% else %}{{ params.source }}{% endif %}" style="display:inline-block;background-color:#E0004D;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:800;text-decoration:none;border-radius:28px;padding:15px 42px;">
+        Recuperar mi carrito &rarr;
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="body-pad" style="background-color:#ffffff;padding:40px;">
+      <div style="border:1px solid #fed7aa;background-color:#fff7ed;border-radius:10px;padding:16px 20px;margin-bottom:22px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td width="34" valign="top" style="font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1;">⚠️</td>
+            <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#374151;line-height:1.55;">
+              Los productos en tu carrito tienen <strong style="color:#E0004D;">stock limitado</strong>. No podemos garantizar disponibilidad por más tiempo.
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:#E0004D;margin:0 0 16px;">
+        Productos en tu carrito
+      </p>
+
+      <div style="border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;background-color:#ffffff;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          {% for item in params.items %}
+          <tr>
+            <td style="padding:0;">
+              <div style="border-bottom:1px solid #eeeeee;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="product-img-cell" width="90" valign="top" style="padding:16px 0 16px 20px;">
+                      <img class="product-img" src="{{ item.image_url }}" alt="{% if item.parent_name %}{{ item.parent_name }}{% else %}{{ item.name }}{% endif %}" width="72" height="72" style="width:72px;height:72px;object-fit:cover;background-color:#f7f7f7;border-radius:8px;" />
+                    </td>
+                    <td valign="top" style="padding:18px 12px;">
+                      <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:800;color:#0A1A3B;line-height:1.25;margin:0 0 5px;">
+                        {% if item.parent_name %}{{ item.parent_name }}{% else %}{{ item.name }}{% endif %}
+                      </p>
+                      <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#7b8495;line-height:1.45;margin:0 0 7px;">
+                        {% for variation in item.variations %}{% if variation.value %}{{ variation.label }}: {{ variation.value }}&nbsp;&nbsp;{% endif %}{% endfor %}
+                      </p>
+                      <div style="display:inline-block;border:1px solid #fecaca;background-color:#fff1f2;border-radius:14px;padding:3px 9px;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#E0004D;">⚡ Pocas unidades</div>
+                    </td>
+                    <td align="right" valign="top" style="padding:18px 20px 18px 6px;white-space:nowrap;">
+                      {% if item.discount_amount > 0 %}
+                      <div style="display:inline-block;background-color:#E0004D;border-radius:14px;padding:3px 9px;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:800;color:#ffffff;margin-bottom:4px;">Oferta</div>
+                      <p style="font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:800;color:#0A1A3B;margin:0;">${{ item.final_price|floatformat:2 }}</p>
+                      <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9ca3af;text-decoration:line-through;margin:1px 0 0;">${{ item.price|floatformat:2 }}</p>
+                      {% else %}
+                      <p style="font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:800;color:#0A1A3B;margin:0;">${{ item.final_price|floatformat:2 }}</p>
+                      {% endif %}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+          <tr>
+            <td style="padding:0;">
+              <div style="background-color:#fafafa;padding:18px 20px;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:800;color:#193C6B;">Total del carrito</td>
+                    <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:900;color:#E0004D;">${{ params.cart.grand_total|floatformat:2 }}</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="text-align:center;padding:30px 0 32px;">
+        <a href="{% if params.customer.url %}{{ params.customer.url }}{% else %}{{ params.source }}{% endif %}" style="display:inline-block;background-color:#E0004D;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:800;text-decoration:none;border-radius:28px;padding:15px 42px;">
+          Completar mi compra &rarr;
+        </a>
+        <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#a3acba;margin:12px 0 0;">
+          Pago seguro &middot; Entrega en 3 días hábiles
+        </p>
+      </div>
+
+      <div style="height:1px;background-color:#eeeeee;margin:0 0 28px;"></div>
+
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:#E0004D;margin:0 0 18px;">
+        ¿Por qué comprar en Venus?
+      </p>
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="reason-icon-cell" width="60" valign="top" style="padding:0 0 18px;">
+            <div style="width:44px;height:44px;background-color:#f3f0ec;border-radius:8px;text-align:center;font-size:22px;line-height:44px;">🚚</div>
+          </td>
+          <td valign="top" style="padding:0 0 18px;border-bottom:1px solid #eeeeee;">
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:800;color:#0A1A3B;margin:0 0 4px;">Envío a todo Ecuador</p>
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#7b8495;line-height:1.45;margin:0;">Recibe tu pedido en hasta 3 días hábiles en la comodidad de tu hogar.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="reason-icon-cell" width="60" valign="top" style="padding:18px 0;">
+            <div style="width:44px;height:44px;background-color:#f3f0ec;border-radius:8px;text-align:center;font-size:22px;line-height:44px;">🔄</div>
+          </td>
+          <td valign="top" style="padding:18px 0;border-bottom:1px solid #eeeeee;">
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:800;color:#0A1A3B;margin:0 0 4px;">Cambio de talla completamente gratis</p>
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#7b8495;line-height:1.45;margin:0;">Si la talla no te queda, tienes 15 días para hacer el cambio sin ningún costo.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="reason-icon-cell" width="60" valign="top" style="padding:18px 0;">
+            <div style="width:44px;height:44px;background-color:#f3f0ec;border-radius:8px;text-align:center;font-size:22px;line-height:44px;">🔒</div>
+          </td>
+          <td valign="top" style="padding:18px 0;border-bottom:1px solid #eeeeee;">
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:800;color:#0A1A3B;margin:0 0 4px;">Pago 100% seguro</p>
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#7b8495;line-height:1.45;margin:0;">Aceptamos Visa, Mastercard, Diners Club y Datafast con total seguridad.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="reason-icon-cell" width="60" valign="top" style="padding:18px 0 0;">
+            <div style="width:44px;height:44px;background-color:#f3f0ec;border-radius:8px;text-align:center;font-size:22px;line-height:44px;">🇪🇨</div>
+          </td>
+          <td valign="top" style="padding:18px 0 0;">
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:800;color:#0A1A3B;margin:0 0 4px;">Calzado ecuatoriano de calidad</p>
+            <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#7b8495;line-height:1.45;margin:0;">Fabricamos calzado desde 1938 con materiales seleccionados para garantizar durabilidad.</p>
+          </td>
+        </tr>
+      </table>
+
+      {% if params.reviews %}
+      <div style="height:1px;background-color:#eeeeee;margin:32px 0 28px;"></div>
+
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:#E0004D;margin:0 0 18px;">
+        Lo que dicen nuestros clientes
+      </p>
+
+      {% for review in params.reviews %}
+      <div style="border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px;margin-bottom:10px;">
+        <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#E0004D;margin:0 0 10px;">
+          ★ {{ review.rating|floatformat:0 }}/5
+          {% if review.title %}<span style="font-weight:800;">&middot; {{ review.title }}</span>{% endif %}
+        </p>
+        <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#374151;font-style:italic;line-height:1.55;margin:0 0 8px;">
+          "{{ review.summary }}"
+        </p>
+        <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#8b95a5;margin:0;">
+          {{ review.customer_name }}{% if review.product_name %} &middot; {{ review.product_name }}{% endif %}
+        </p>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </td>
+  </tr>
+
+  <tr>
+    <td class="footer-pad" style="background-color:#0A1A3B;padding:34px 40px 30px;text-align:center; border-radius:0 0 12px 12px;">
+      <div style="border-radius:0 0 12px 12px;">
+      <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png" alt="Venus" width="78" style="margin:0 auto 8px;" />
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.48);margin:0 0 18px;">Calzado ecuatoriano desde 1938</p>
+      <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 20px;">
+        <tr>
+          <td style="padding:0 5px;"><a href="https://www.facebook.com/venusecuador"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c7a289d644f86c98f.png" alt="Facebook" width="34" height="34" /></a></td>
+          <td style="padding:0 5px;"><a href="https://www.instagram.com/venusecuador"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6e.png" alt="Instagram" width="34" height="34" /></a></td>
+          <td style="padding:0 5px;"><a href="https://www.tiktok.com/@venusecuador"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6d.png" alt="TikTok" width="34" height="34" /></a></td>
+          <td style="padding:0 5px;"><a href="https://www.youtube.com/@venusecuador"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c47b9790e32f53c35.png" alt="YouTube" width="34" height="34" /></a></td>
+          <td style="padding:0 5px;"><a href="https://twitter.com/venusecuador"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6c.png" alt="X" width="34" height="34" /></a></td>
+        </tr>
+      </table>
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.42);line-height:1.7;margin:0 0 12px;">
+        Política de privacidad &nbsp;&nbsp; Política de devoluciones &nbsp;&nbsp; Términos de compra &nbsp;&nbsp; FAQs &nbsp;&nbsp; Contáctanos<br />
+        Parque Industrial 4ta. Etapa, Panamericana Norte Km. 10 · 03 500 3000<br />
+        venus@plasticaucho.com · venus.com.ec
+      </p>
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.42);line-height:1.6;margin:0;">
+        Recibiste este email porque tienes productos en tu carrito en venus.com.ec.<br />
+        <a href="{{ unsubscribe }}" style="color:rgba(255,255,255,0.55);text-decoration:underline;">Cancelar suscripción</a>
+      </p>
+      </div>
+    </td>
+  </tr>
+
+</table>
+
+</td>
+</tr>
+</table>
+</body>
+</html>

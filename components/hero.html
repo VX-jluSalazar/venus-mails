@@ -1,0 +1,29 @@
+<tr>
+  <td class="hero-pad" style="background-color:#0A1A3B;padding:40px 32px 48px;text-align:center;">
+    <!-- Personalizar: badge opcional -->
+    <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 18px;">
+      <tr>
+        <td style="background-color:rgba(34,197,94,0.20);border:1.5px solid rgba(34,197,94,0.45);border-radius:24px;padding:8px 20px;">
+          <span style="display:inline-block;width:8px;height:8px;background-color:#86efac;border-radius:50%;margin-right:8px;vertical-align:middle;"></span>
+          <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#86efac;vertical-align:middle;">Estado del pedido</span>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Personalizar: icono, titulo y descripcion -->
+    <h1 class="hero-title" style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:26px;font-weight:700;margin:0 0 14px;line-height:1.2;">
+      Titulo del correo, {{ params.customer.first_name }}
+    </h1>
+    <p style="color:rgba(255,255,255,0.80);font-family:Arial,Helvetica,sans-serif;font-size:15px;margin:0 auto 26px;line-height:1.6;max-width:430px;">
+      Mensaje principal del correo.
+    </p>
+
+    <table cellpadding="0" cellspacing="0" border="0" align="center">
+      <tr>
+        <td style="background-color:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:24px;padding:10px 24px;">
+          <span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;">Pedido #{{ params.order.entity_id }}</span>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

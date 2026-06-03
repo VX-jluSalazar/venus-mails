@@ -1,0 +1,252 @@
+Saltar al contenido principal
+Página principal del Centro de ayuda de Inicio
+Descubrir Brevo
+Iniciar sesión
+Inicio
+ Transaccional
+ Transaccional
+ Personaliza tus emails transaccionales
+Búsqueda
+Buscar en nuestros artículos
+[Manual] Personalizar los mensajes con contenido dinámico (lenguaje de plantillas de Brevo)
+Brevo ofrece dos métodos para personalizar tus mensajes: insertar una variable directamente mediante la opción Add variable (Añadir variable) en la barra de herramientas o escribirla manualmente.
+Este artículo cubre el método manual. Si prefieres el método Add variable (Añadir variable), consulta nuestro artículo dedicado Personalizar los mensajes con contenido dinámico (lenguaje de plantillas de Brevo).
+
+Utiliza el lenguaje de plantillas de Brevo para personalizar tus mensajes con datos específicos de contactos o eventos, ocultar o mostrar contenido a destinatarios específicos y ajustar cómo se formatean los valores en tus mensajes.
+
+💬 Variables
+Las variables, también conocidas como marcadores de posición o etiquetas personalizadas, son etiquetas que puedes insertar en tus mensajes para personalizarlos. Cuando envías un mensaje, cada variable se reemplaza automáticamente con la información del contacto correspondiente.
+
+En el lenguaje de plantillas de Brevo, las variables deben estar entre llaves dobles, como {{ ... }} o {{...}}. Se pueden utilizar para inserciones simples o combinarse con declaraciones condicionales y filtros para una personalización avanzada.
+
+El lenguaje de plantillas de Brevo admite diferentes tipos de variables:
+
+👤 Variables de contacto
+🔗 Variables de enlace y vista previa de email
+📅 Variables de fecha
+⚡ Variables de evento
+🛢️ Variables de feed de datos
+🛒 Variables del feed de productos
+👤 Variables de contacto
+Disponible para:	✅ Email	✅ SMS	✅ WhatsApp	✅ Push
+Las variables de contacto te permiten mostrar datos de tus atributos de contacto, como el nombre de un contacto, en tus mensajes. Estas variables tienen el formato {{ contact.ATTRIBUTE }}, donde debes reemplazar ATTRIBUTE por el nombre exacto de tu atributo de contacto tal y como aparece en la página Contact attributes (Atributos de contacto) en tu cuenta de Brevo. Puedes utilizar tanto los atributos predeterminados de Brevo como los atributos personalizados.
+
+A continuación se muestran algunos ejemplos de variables de contacto con tres atributos predeterminados de Brevo y un atributo personalizado:
+
+Entrada	Descripción	Resultado
+{{ contact.EMAIL }}	Muestra la dirección de email del destinatario (predeterminado).	abby@the-green-yoga.com
+{{ contact.FIRSTNAME }}	Muestra el nombre del destinatario (predeterminado).	Abby
+{{ contact.SMS }}	Muestra el número de teléfono del destinatario (predeterminado).	+12152688872
+{{ contact.LANGUAGE }}	Muestra el idioma del destinatario (personalizado).	Inglés
+➡️ Para obtener más información sobre los diferentes tipos de atributos de contacto disponibles y cómo crearlos personalizados, consulta nuestros artículos dedicados:
+
+Información sobre los atributos de contacto
+Crear y gestionar atributos de contacto
+🔗 Variables de enlace y vista previa de email
+Disponible para:	✅ Email	✖️ SMS	✖️ WhatsApp	✖️ Push
+Las variables de enlace y vista previa de email permiten a los destinatarios ver tu email en su navegador, darse de baja de tus comunicaciones y administrar sus preferencias. Estas variables deben colocarse dentro de una etiqueta HTML <a> , envolviendo el texto que se mostrará en el email.
+
+Las siguientes variables de enlace y vista previa de email están disponibles:
+
+Entrada	Descripción	Resultado
+<a href="{{ mirror }}">Ver en el navegador</a>
+
+Muestra el enlace de espejo con el texto "Ver en el navegador".
+
+Ver en el navegador
+Si ya no quieres <a href="{{ unsubscribe }}">Cancelar suscripción</a>
+
+Muestra el enlace para cancelar la suscripción con el texto "Cancelar suscripción".	Cancelar suscripción
+<a href="{{ update_profile }}">Actualizar tus preferencias</a>
+
+Muestra el enlace de actualización del perfil con el texto "Actualizar tus preferencias".	Actualizar tus preferencias
+<a href="{{ doubleoptin }}">Confirmo mi suscripción</a>
+
+Muestra el enlace de confirmación doble con el texto "Confirmo mi suscripción".	Confirmo mi suscripción
+➡️ Para obtener más información, consulta nuestros artículos al respecto:
+
+Insertar un enlace "Ver en el navegador" en las campañas
+Insertar un enlace de cancelación de suscripción en tus campañas
+Actualizar sus datos y preferencias de contactos (formulario de actualización de perfil)
+Crear una plantilla de email personalizada de confirmación doble para un formulario de suscripción creado en Brevo
+📅 Variables de fecha
+Disponible para:	✅ Email	✅ SMS	✖️ WhatsApp	✖️ Push
+Las variables de fecha te permiten insertar una marca de tiempo de la fecha y hora exactas en que se envió un email. La fecha se basa en la zona horaria de tu cuenta de Brevo. Si no hay una zona horaria configurada en tu cuenta, la variable tendrá como valor predeterminado la marca de tiempo actual en UTC. 
+
+La siguiente variable de fecha está disponible:
+
+Entrada	Descripción	Resultado
+Hoy es {{ time_now }}	
+Muestra la fecha y hora exactas en que se envió un email con el siguiente formato de marca de tiempo: yyyy-MM-dd HH:mm:ss.SSSSSSSSS ZZZZ zzz.
+
+Hoy es 2025-03-11 15:10:20.823713502 +0100 CET
+Hoy es {{ time_now |date:"Monday, Jan 2, 2006" }}	Muestra la fecha y hora exactas en que se envió un email con el formato especificado en el filtro date.	Hoy es martes 11 de marzo de 2025
+➡️ Para obtener más información sobre cómo ajustar el formato de las fechas, consulta nuestro artículo dedicado Modificar el formato de tu marcador de posición con filtros.
+
+⚡ Variables de evento
+Disponible para:	✅ Email
+(solo activado)	✅ SMS
+(solo activado)	✅ WhatsApp
+(solo activado)	✖️ Push
+Las variables de evento te permiten mostrar datos de eventos específicos activados por las acciones de un contacto, como el precio del último artículo comprado o el nombre de la reunión que reservó.
+
+Para identificar las variables de evento para tu mensaje, comprueba tu API de llamada o los logs de eventos en Brevo. A continuación se muestra un ejemplo de una estructura JSON típica, donde:
+
+email_event-variables_json-example_en-us.png	
+data es el objeto raíz que contiene las siguientes propiedades:
+
+id → El ID del carrito
+total → El importe total del carrito
+currency → El tipo de divisa
+url → Un enlace al carrito
+items son un conjunto de productos en el carrito, cada uno de los cuales contiene las siguientes propiedades:
+name → Nombre del producto
+price → Precio del producto
+url → URL de la página del producto
+image → URL de la imagen del producto
+💡 Información relevante
+Los data del objeto raíz son obligatorios.  El resto de propiedades son opcionales y pueden nombrarse según sea necesario.
+
+A las variables de evento se les aplica formato mediante llaves dobles. Cada dato en la estructura JSON se puede incluir en una variable de evento para personalizar tus mensajes:
+
+⏫ Variables de evento para datos almacenados directamente en el objeto raíz
+Los datos almacenados directamente en el objeto raíz de la estructura JSON suelen contener detalles clave de eventos, como información del carrito. Estos valores se pueden recuperar utilizando una variable de evento, sin necesidad de recorrer matrices, utilizando la siguiente sintaxis:
+
+{{ params.property }}
+
+Donde:
+
+params hace referencia al objeto raíz. Utiliza siempre params para hacer referencia al objeto raíz, incluso si tiene un nombre diferente en tu estructura JSON.
+property debe reemplazarse por el nombre exacto de la propiedad en el objeto raíz en tu estructura JSON.
+Por ejemplo, en nuestra estructura JSON, el objeto raíz se llama data y contiene las propiedades id, total, currency y url. Por tanto, las variables de evento correspondientes serían:
+
+Entrada	Descripción	Resultado
+{{ params.id }}
+
+ID del carrito	cart:1234
+{{ params.total }}
+
+Total del carrito	280
+{{ params.currency }}
+
+Divisa del carrito	USD
+{{ params.url }}
+
+URL del carrito	http://www.ejemplo.com
+↪️ Variables de evento para datos accesibles desde una matriz en el objeto raíz
+Las matrices almacenadas en el objeto raíz, como la matriz items en nuestro ejemplo JSON, pueden contener varios elementos y cada elemento puede tener varias propiedades.
+
+Puede mostrar elementos específicos mediante indexación o todos los elementos mediante un bucle for.
+
+Mostrar elementos específicos mediante indexación
+Si solo necesitas acceder a determinados elementos de una matriz, sin mostrar la matriz completa, puedes hacer referencia manualmente a cada elemento por su posición (índice). Las matrices están ordenadas, lo que significa que cada elemento tiene una posición específica, comenzando desde el índice 0 para el primer elemento, 1 para el segundo, y así sucesivamente.
+
+Para hacer referencia a elementos específicos, las variables de evento se formatean como {{ params.array.index.property }}, donde:
+
+params hace referencia al objeto raíz. Utiliza siempre params para hacer referencia al objeto raíz, incluso si tiene un nombre diferente en tu estructura JSON.
+array debe reemplazarse por el nombre exacto de la matriz en el objeto raíz, tal como aparece en tu estructura JSON.
+index debe reemplazarse por el número de índice del elemento al que quieres hacer referencia.
+property debe reemplazarse por el nombre exacto de la propiedad dentro del elemento de la matriz, tal como aparece en tu estructura JSON.
+Por ejemplo, en nuestra estructura JSON, el primer elemento (índice 0) es "Zapatos negros" y el segundo elemento (índice 1) es "Camisa blanca". Por tanto, las variables de evento correspondientes serían:
+
+Entrada	Descripción	Resultado
+{{ params.items.0.name }}
+
+Nombre del primer elemento de la matriz	Zapatos negros
+{{ params.items.1.name }}
+
+Nombre del segundo elemento de la matriz	Camisa blanca
+Mostrar todos los elementos mediante un bucle for
+Utiliza un bucle for para mostrar todos los elementos de una matriz de forma dinámica. En lugar de hacer referencia manualmente a cada índice, el bucle itera a través de la matriz y muestra cada elemento automáticamente. Esto resulta especialmente útil cuando se desconoce el número de elementos de la matriz, como en el caso de una lista de publicaciones semanales en un blog o un recibo de productos comprados.
+
+Por ejemplo, en nuestra estructura JSON, si queremos mostrar el nombre de cada elemento en la matriz items, el bucle for correspondiente sería:
+
+Entrada	Descripción	Resultado
+{% for item in params.items %}
+{{ item.name }}
+{% endfor %}
+Nombre de todos los elementos de la matriz	
+Zapatos negros
+
+Camisa blanca
+
+➡️ Para obtener más información sobre los bucles for, consulta nuestro artículo dedicado [Manual] Repetir un bloque de elementos en los emails mediante bucles for.
+
+🛢️ Variables de feed de datos
+Disponible para:	✅ Email	✅ SMS	✖️ WhatsApp	✖️ Push
+Las variables de feed de datos te permiten personalizar tus comunicaciones de marketing enviadas con Brevo con la información más reciente sobre productos, clientes, eventos o cualquier otro dato relevante de tu fuente de datos externa o API. Úsalas para automatizar y personalizar tus mensajes con datos en tiempo real. 
+
+Para identificar las variables de feed de datos para tu mensaje, haz clic en el menú desplegable Account (Cuenta) y seleccione Settings (Configuración) > Data management (Gestión de datos) > Data feeds (Feeds de datos) para comprobar la estructura de tu archivo de fuente en Brevo:
+
+datafeed_valid-manually_en-us.png
+
+A las variables de feed de datos se les aplica formato mediante llaves dobles. Según la complejidad de la estructura de tu feed de datos, el formato de las variables de tu feed de datos varía: 
+
+⏫ Variables de feed de datos para datos almacenados directamente en el objeto raíz
+↪️ Variables de feed de datos para datos accesibles desde una matriz en el objeto raíz
+🛒 Variables del feed de productos
+Disponible para:	✅ Email	✅ SMS	✖️ WhatsApp	✖️ Push
+Las variables de feed de productos te permiten mostrar una lista dinámica de productos de tu tienda online, lo que facilita la creación de recomendaciones personalizadas. Contiene detalles del producto como nombre, descripción, precios, imágenes y disponibilidad. Utilízalos para mostrar artículos populares, personalizar recomendaciones o mantener visualizaciones de productos uniformes en tus campañas de marketing.
+
+product-feed-example.png
+
+A las variables de feed de productos se les aplica formato mediante llaves dobles:
+
+{{ feed.feedalias.products.variable }}
+
+Acto seguido, debes reemplazar:
+
+feedalias es el nombre exacto de tu feed de productos, y coincide con la ortografía y las mayúsculas y minúsculas tal y como aparece en la página Product feeds (Feeds de productos).
+variable es el nombre del campo en la API que contiene los datos que quieres recuperar.
+Entrada	Descripción	Resultado
+{{feed.mats_bestseller.products.imageUrl}}	Imagen del producto	black-yoga-mat.png
+{{feed.mats_bestseller.products.name}}	Nombre del producto	Esterilla de yoga antideslizante - 6 mm
+{{feed.mats_bestseller.products.url}}	Enlace al producto	https://thegreenyoga.com/non-slip/black-mat.html
+Mostrar todos los elementos mediante un bucle for
+Utiliza un bucle for para mostrar todos los elementos de una matriz de forma dinámica. En lugar de hacer referencia manualmente a cada índice, el bucle itera a través de la matriz y muestra cada elemento automáticamente. Esto resulta especialmente útil cuando se desconoce el número de elementos de la matriz, como en el caso de una lista de publicaciones semanales en un blog o un recibo de productos comprados.
+
+Por ejemplo, si queremos mostrar el nombre de cada artículo en el feed de productos mats_bestseller, el bucle for correspondiente sería:
+
+Entrada	Descripción	Resultado
+{% for item in feed.mats_bestseller.products %}
+{{ item.name }}
+{% endfor %}
+Nombre de todos los artículos en el feed de productos	
+Esterilla de yoga antideslizante - 6 mm
+
+Bloque de yoga - 4 pulgadas
+
+Pantalones de yoga de cintura alta y pierna ancha
+
+➡️ Para obtener más información sobre los bucles for, consulta nuestro artículo dedicado [Manual] Repetir un bloque de elementos en los emails mediante bucles for.
+
+📢 Declaraciones condicionales
+Disponible para:	✅ Email	✖️ SMS	✖️ WhatsApp	✖️ Push
+👀 Visualización condicional (declaraciones if)
+Utiliza una declaración if para mostrar u ocultar partes de tu email en función de los datos de cada destinatario. Esto te permite enviar un único email que se adapta dinámicamente a diferentes contactos, dependiendo de condiciones específicas.
+
+➡️ Para obtener más información sobre la declaración if, consulta nuestro artículo dedicado [Manual] Mostrar u ocultar contenido en tus emails mediante declaraciones if.
+
+🔁 Secciones repetibles (bucles for)
+Utiliza un bucle for para mostrar todos los elementos de una matriz de forma dinámica. En lugar de hacer referencia manualmente a cada índice, el bucle itera a través de la matriz y muestra cada elemento automáticamente. Esto resulta especialmente útil cuando se desconoce el número de elementos de la matriz, como en el caso de una lista de publicaciones semanales en un blog o un recibo de productos comprados.
+
+➡️ Para obtener más información sobre los bucles for, consulta nuestro artículo dedicado [Manual] Repetir un bloque de elementos en los emails mediante bucles for.
+
+🪄 Filtros
+Disponible para:	✅ Email	✅ SMS	✖️ WhatsApp	✖️ Push
+Los filtros modifican la salida de una variable transformando su valor. Se colocan dentro de los corchetes dobles de la variable y se separan por una barra vertical |, por ejemplo, {{ contact.FIRSTNAME|upper }}. También puedes encadenar varios filtros y que cada uno aplique su transformación al resultado del anterior.
+
+A continuación se muestran algunos ejemplos de variables utilizadas junto con filtros para modificar su salida:
+
+Entrada	Descripción	Resultado
+{for item in feed.yoga_classes.following_classes|slice:"0:3}	En un bucle for, limita la cantidad de elementos a mostrar 	
+Power Flow Yoga
+
+Evening Restorative
+
+Fundamentos del Hatha Yoga
+
+{{ contact.FIRSTNAME|upper }}	Convierte el nombre del destinatario a mayúsculas (originalmente: Abby).	ABBY
+{{ params.TOTAL|floatformat:2 }}	Muestra el total del carrito con dos decimales (originalmente: 49.995).	49.99
+{{ time_now|date:"02/01/2006" }}	Aplica formato a la fecha actual como dd/MM/yyyy (originalmente: 2025-03-11 15:10:20.823713502 +0100 CET).	11/03/2025 
+➡️ Para obtener más información, consulta nuestro artículo dedicado Modificar el formato del marcador de posición con filtros.

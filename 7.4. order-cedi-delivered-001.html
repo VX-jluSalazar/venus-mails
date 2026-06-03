@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Pedido retirado - Venus</title>
+  <style type="text/css">
+    body, table, td, a { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+    table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; }
+    img { -ms-interpolation-mode:bicubic; border:0; outline:none; text-decoration:none; display:block; }
+    body { margin:0 !important; padding:0 !important; width:100% !important; min-width:100%; background-color:#f0f2f5; }
+    a { color:inherit; }
+    @media only screen and (max-width:620px) {
+      .email-container { width:100% !important; }
+      .header-pad { padding:18px 20px !important; }
+      .hero-pad { padding:36px 20px 42px !important; }
+      .body-pad { padding:30px 20px !important; }
+      .footer-pad { padding:32px 20px 24px !important; }
+      .product-img-cell { display:none !important; }
+      .hero-title { font-size:24px !important; }
+      .progress-label { font-size:10px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background-color:#f0f2f5;width:100%;">
+<div style="display:none;font-size:1px;color:#f0f2f5;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">Pedido #{{ params.order.entity_id }} retirado correctamente en Materia Prima.</div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f0f2f5;"><tr><td align="center" style="padding:24px 12px;"><table class="email-container" width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="width:100%;max-width:600px;">
+
+  <tr><td style="padding:0;"><div style="background-color:#193C6B;border-radius:12px 12px 0 0;padding:18px 40px;"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><a href="{{ params.order.order_url }}"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png" alt="Venus" width="110" style="width:110px;height:auto;" /></a></td><td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.62);">Calzado ecuatoriano desde 1938</td></tr></table></div></td></tr>
+
+  <tr><td class="hero-pad" style="background-color:#0A1A3B;padding:46px 40px 48px;text-align:center;">
+    <div style="display:inline-block;background-color:rgba(16,185,129,0.16);border:1px solid rgba(16,185,129,0.50);border-radius:24px;padding:8px 20px;margin:0 0 20px;"><span style="display:inline-block;width:8px;height:8px;background-color:#34d399;border-radius:50%;margin-right:8px;vertical-align:middle;"></span><span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:800;color:#34d399;vertical-align:middle;">Pedido completado</span></div>
+    <div style="width:72px;height:72px;background-color:#10B981;border-radius:50%;font-family:Arial,Helvetica,sans-serif;font-size:36px;color:#ffffff;line-height:72px;margin:0 auto 22px;">✓</div>
+    <h1 class="hero-title" style="font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;color:#ffffff;line-height:1.15;margin:0 0 16px;">Pedido retirado, {{ params.customer.first_name }}!</h1>
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:16px;color:rgba(255,255,255,0.78);line-height:1.55;margin:0 auto 26px;max-width:450px;">Tu calzado fue entregado correctamente en Materia Prima. Esperamos que lo disfrutes. <strong style="color:#ffffff;">¡Gracias por tu compra!</strong></p>
+    <div style="display:inline-block;background-color:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.24);border-radius:24px;padding:10px 24px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:800;color:#ffffff;">Pedido #{{ params.order.entity_id }} &middot; Completado</div>
+  </td></tr>
+
+  <tr><td class="body-pad" style="background-color:#ffffff;padding:40px;">
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;color:#E0004D;margin:0 0 22px;">Estado de tu pedido</p>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:32px;">
+        <tr>
+          <td width="22%" align="center" valign="top"><div style="width:38px;height:38px;background-color:#10B981;border-radius:50%;margin:0 auto;"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png" alt="Completado" width="16" height="16" style="display:block;margin:0 auto;padding-top:11px;" /></div><p class="progress-label" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#10B981;margin:8px 0 0;line-height:1.3;">Pedido<br />recibido</p></td>
+          <td width="4%" valign="top" style="padding-top:19px;"><div style="height:2px;background-color:#e5e7eb;line-height:2px;font-size:2px;">&nbsp;</div></td>
+          <td width="22%" align="center" valign="top"><div style="width:38px;height:38px;background-color:#10B981;border-radius:50%;margin:0 auto;"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png" alt="Completado" width="16" height="16" style="display:block;margin:0 auto;padding-top:11px;" /></div><p class="progress-label" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#10B981;margin:8px 0 0;line-height:1.3;">Pago<br />confirmado</p></td>
+          <td width="4%" valign="top" style="padding-top:19px;"><div style="height:2px;background-color:#e5e7eb;line-height:2px;font-size:2px;">&nbsp;</div></td>
+          <td width="22%" align="center" valign="top"><div style="width:38px;height:38px;background-color:#10B981;border-radius:50%;margin:0 auto;"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png" alt="Completado" width="16" height="16" style="display:block;margin:0 auto;padding-top:11px;" /></div><p class="progress-label" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#10B981;margin:8px 0 0;line-height:1.3;">Listo para<br />retiro</p></td>
+          <td width="4%" valign="top" style="padding-top:19px;"><div style="height:2px;background-color:#e5e7eb;line-height:2px;font-size:2px;">&nbsp;</div></td>
+          <td width="22%" align="center" valign="top"><div style="width:38px;height:38px;background-color:#10B981;border-radius:50%;margin:0 auto;"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png" alt="Completado" width="16" height="16" style="display:block;margin:0 auto;padding-top:11px;" /></div><p class="progress-label" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;color:#10B981;margin:8px 0 0;line-height:1.3;">Retirado</p></td>
+        </tr>
+      </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><div style="padding:24px 24px;text-align:center;border:1px solid #86efac;background-color:#ecfdf5;border-radius:10px;margin-bottom:28px;"><p style="font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:900;color:#166534;margin:0 0 8px;">Retiro registrado correctamente</p><p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#166534;line-height:1.6;margin:0;">Tu pedido fue recibido en Materia Prima. Este correo es tu comprobante de entrega.</p></div></td></tr></table>
+
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;color:#E0004D;margin:0 0 16px;">Productos retirados</p>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><div style="border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;margin-bottom:28px;"><table width="100%" cellpadding="0" cellspacing="0" border="0">{% for item in params.items %}<tr><td class="product-img-cell" width="86" valign="top" style="padding:16px 0 16px 18px;border-bottom:1px solid #eeeeee;"><img src="{{ item.image_url }}" alt="{% if item.parent_name %}{{ item.parent_name }}{% else %}{{ item.name }}{% endif %}" width="62" height="62" style="border-radius:8px;object-fit:cover;background-color:#f7f7f7;" /></td><td valign="top" style="padding:18px 12px;border-bottom:1px solid #eeeeee;"><p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:900;color:#0A1A3B;margin:0 0 5px;">{% if item.parent_name %}{{ item.parent_name }}{% else %}{{ item.name }}{% endif %}</p><p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#7b8495;line-height:1.4;margin:0;">{% for variation in item.variations %}{% if variation.value %}{{ variation.label }}: {{ variation.value }}&nbsp;&nbsp;{% endif %}{% endfor %}Cantidad: {{ item.qty|floatformat:0 }}</p></td><td align="right" valign="top" style="padding:20px 18px 18px 6px;white-space:nowrap;border-bottom:1px solid #eeeeee;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:900;color:#0A1A3B;">${{ item.final_price|floatformat:2 }}</td></tr>{% endfor %}</table></div></td></tr></table>
+
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;color:#E0004D;margin:0 0 16px;">Resumen del pedido</p>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><div style="border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;margin-bottom:28px;"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:14px 18px;border-bottom:1px solid #eeeeee;"><table width="100%"><tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#7b8495;">Número de pedido</td><td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:800;color:#0A1A3B;">#{{ params.order.entity_id }}</td></tr></table></td></tr><tr><td style="padding:14px 18px;border-bottom:1px solid #eeeeee;"><table width="100%"><tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#7b8495;">Fecha</td><td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:800;color:#0A1A3B;">{{ params.order.created_at }}</td></tr></table></td></tr><tr><td style="padding:14px 18px;border-bottom:1px solid #eeeeee;"><table width="100%"><tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#7b8495;">Método de pago</td><td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:800;color:#0A1A3B;">{{ params.order.payment_method }}</td></tr></table></td></tr><tr><td style="padding:16px 18px;background-color:#fafafa;"><table width="100%"><tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:900;color:#193C6B;">Total</td><td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:900;color:#E0004D;">{{ params.order.currency }} ${{ params.order.grand_total|floatformat:2 }}</td></tr></table></td></tr></table></div></td></tr></table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><div style="background-color:#193C6B;border-radius:10px;margin-bottom:28px;padding:28px 24px;text-align:center;"><p style="font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:900;color:#ffffff;margin:0 0 8px;">¿Cómo te fue con tu compra?</p><p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:rgba(255,255,255,0.72);line-height:1.5;margin:0 0 16px;">Tu opinión ayuda a otros clientes a elegir mejor.</p><p style="font-family:Arial,Helvetica,sans-serif;font-size:24px;color:#fbbf24;margin:0 0 18px;">★ ★ ★ ★ ★</p><a href="{{ params.order.survey_url }}" style="display:inline-block;background-color:#E0004D;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:900;text-decoration:none;border-radius:26px;padding:13px 34px;">Dejar mi reseña &rarr;</a></div></td></tr></table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><div style="border:1px solid #e5e7eb;border-radius:10px;margin-bottom:28px;padding:24px 26px;"><p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:900;color:#0A1A3B;margin:0 0 16px;">Información sobre tu compra</p><div style="border:1px solid #facc15;background-color:#fffbeb;border-radius:8px;padding:16px 18px;margin-bottom:18px;"><p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#92400e;line-height:1.6;margin:0;">¿Necesitas un cambio de talla? Tienes máximo <strong>15 días</strong> desde hoy para solicitarlo.</p></div><p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#374151;line-height:1.65;margin:0;">Revisa tu calzado al momento de recibirlo. {% if params.order.payment_method_code == "banktransfer" %}Conserva este comprobante junto con tu pago confirmado.{% else %}El débito de {{ params.order.currency }} ${{ params.order.grand_total|floatformat:2 }} será reflejado en tu próximo rol de pagos.{% endif %}</p></div></td></tr></table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><div style="border:1px solid #e5e7eb;border-radius:10px;padding:24px 20px;text-align:center;"><p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#374151;line-height:1.5;margin:0 0 14px;">¿Tienes alguna duda sobre tu pedido o método de pago? Estamos aquí.</p><p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:800;color:#193C6B;line-height:1.9;margin:0;">venus@plasticaucho.com &nbsp;&nbsp; WhatsApp 098 703 1150<br />03 500 3000</p></div></td></tr></table>
+  </td></tr>
+
+  <tr><td style="padding:0;"><div style="background-color:#0A1A3B;padding:34px 40px 30px;text-align:center;border-radius:0 0 12px 12px;"><img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png" alt="Venus" width="78" style="margin:0 auto 10px;" /><p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.42);line-height:1.8;margin:0;">Calzado ecuatoriano desde 1938<br />Política de privacidad &nbsp;&nbsp; Política de devoluciones &nbsp;&nbsp; Términos de compra &nbsp;&nbsp; FAQs &nbsp;&nbsp; Contáctanos<br />Parque Industrial 4ta. Etapa, Panamericana Norte Km. 10 &middot; 03 500 3000<br />venus@plasticaucho.com &middot; venus.com.ec<br /><a href="{{ unsubscribe }}" style="color:rgba(255,255,255,0.55);text-decoration:underline;">Cancelar suscripción</a></p></div></td></tr>
+
+</table></td></tr></table>
+</body>
+</html>
