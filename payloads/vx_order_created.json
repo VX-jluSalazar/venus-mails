@@ -1,0 +1,136 @@
+{
+    "billing_address": {
+        "city": "Suscal",
+        "country_id": "EC",
+        "first_name": "Jonathan",
+        "last_name": "Salazar",
+        "region": "Cañar",
+        "region_code": "CN",
+        "street": [
+            "Quito",
+            "Quito"
+        ],
+        "telephone": "+593987654321"
+    },
+    "customer": {
+        "email": "jonathan@velox.ec",
+        "first_name": "Jonathan",
+        "last_name": "Salazar"
+    },
+    "event_code": "vx_order_created",
+    "items": [
+        {
+            "discount_amount": 0,
+            "image_url": "https://staging.venus.com.ec/media/catalog/product/l/l/llnr-am-ng-grupal_1_1.jpg",
+            "is_variation": false,
+            "name": "LLANERA CLÁSICA-Amarillo - Negro-34",
+            "price": 0,
+            "qty": 1,
+            "review_flags": {
+                "has_reviews": false
+            },
+            "row_total": 0,
+            "sku": 16422,
+            "tax_amount": 0,
+            "url": "https://staging.venus.com.ec/catalog/product/view/id/5365/s/llanera-clasica-amarillo-negro-34/"
+        },
+        {
+            "discount_amount": 0,
+            "final_price": 12.83,
+            "image_url": "https://staging.venus.com.ec/media/catalog/product/l/l/llnr-am-ng-grupal_1_1.jpg",
+            "is_variation": true,
+            "name": "LLANERA CLÁSICA-Amarillo - Negro-34",
+            "parent_name": "LLANERA CLÁSICA - Botas impermeables de adulto para trabajo",
+            "parent_sku": 16422,
+            "price": 11.16,
+            "qty": 1,
+            "review_flags": {
+                "has_reviews": false
+            },
+            "row_total": 11.16,
+            "sku": 16422,
+            "tax_amount": 1.67,
+            "url": "https://staging.venus.com.ec/llanera-clasica.html",
+            "variations": [
+                {
+                    "code": "color",
+                    "label": "Color",
+                    "value": "Amarillo - Negro"
+                },
+                {
+                    "code": "talla",
+                    "label": "Talla",
+                    "value": 34
+                }
+            ]
+        }
+    ],
+    "order": {
+        "created_at": "24 de junio, 2026",
+        "currency": "USD",
+        "discount_amount": 0,
+        "entity_id": 101118,
+        "grand_total": 14.89,
+        "payment_method": "Transferencia Bancaria",
+        "payment_method_code": "banktransfer",
+        "shipping_amount": 1.79,
+        "shipping_method": "Domicilio - Envío nacional",
+        "shipping_method_code": "flatrate_flatrate",
+        "state": "new",
+        "status": "pending",
+        "subtotal": 11.16,
+        "tax_amount": 1.94
+    },
+    "related_products": [
+        {
+            "discount_amount": 0,
+            "final_price": 0,
+            "image_url": "https://staging.venus.com.ec/media/catalog/product/a/n/anias_pasador_-_zapatos_de_uso_diario_escolar_y_colegial2.jpg",
+            "name": "ANIAS PASADOR - Zapato de uso Diario Colegial",
+            "price": 0,
+            "sku": "ANIAS PASADOR - Zapato de uso Diario Colegial",
+            "url": "https://staging.venus.com.ec/anias-pasador-zapato-de-uso-diario-colegial.html"
+        },
+        {
+            "discount_amount": 0,
+            "final_price": 0,
+            "image_url": "https://staging.venus.com.ec/media/catalog/product/a/p/apolo_zapatos_deportivos_para_uso_escolar_colegial_y_de_trabajo_color_azul_blanco3.jpg",
+            "name": "APOLO - Zapato Deportivo Multiuso Colores",
+            "price": 0,
+            "sku": "APOLO - Zapato Deportivo Multiuso",
+            "url": "https://staging.venus.com.ec/apolo-zapato-deportivo-multi.html"
+        },
+        {
+            "discount_amount": 0,
+            "final_price": 0,
+            "image_url": "https://staging.venus.com.ec/media/catalog/product/a/n/antonello_cordon_zapatos_formales_de_hombre_color_cafe_grupal.jpg",
+            "name": "ANTONELLO CORDON - Zapato formal de hombre",
+            "price": 0,
+            "sku": "ANTONELLO CORDON - Zapato formal de hombre",
+            "url": "https://staging.venus.com.ec/antonello-cordon-zapatos-formales-de-hombre.html"
+        },
+        {
+            "discount_amount": 0,
+            "final_price": 0,
+            "image_url": "https://staging.venus.com.ec/media/catalog/product/b/o/bota_industrial_de_seguridad_-_impermeable_amarillo_azul_1_2.jpg",
+            "name": "BOTA INDUSTRIAL PESADA - Con plantilla resistente a aceites e hidrocarburos",
+            "price": 0,
+            "sku": "BOTA INDUSTRIAL PESADA - Con plantilla resistente a aceites",
+            "url": "https://staging.venus.com.ec/bota-de-seguridad-impermeable-de-adulto-para-uso-industrial-y-en-construccion.html"
+        }
+    ],
+    "shipping_address": {
+        "city": "Suscal",
+        "country_id": "EC",
+        "first_name": "Jonathan",
+        "last_name": "Salazar",
+        "region": "Cañar",
+        "region_code": "CN",
+        "street": [
+            "Quito",
+            "Quito"
+        ],
+        "telephone": "+593987654321"
+    },
+    "source": "https://staging.venus.com.ec/"
+}

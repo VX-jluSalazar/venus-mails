@@ -1,389 +1,668 @@
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Último aviso antes de cancelar tu pedido - Venus</title>
-  
+
   <style type="text/css">
-    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; }
-    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; display: block; }
-    body { margin: 0 !important; padding: 0 !important; background-color: #f0f2f5; width: 100% !important; min-width: 100%; }
-    a { color: inherit; }
-    .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; }
-    .ExternalClass * { line-height: 100%; }
+    body,
+    table,
+    td,
+    a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      border-collapse: collapse !important;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      display: block;
+    }
+
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background-color: #f0f2f5;
+      width: 100% !important;
+      min-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .ReadMsgBody {
+      width: 100%;
+    }
+
+    .ExternalClass {
+      width: 100%;
+    }
+
+    .ExternalClass * {
+      line-height: 100%;
+    }
 
     @media only screen and (max-width: 620px) {
-      .email-container { width: 100% !important; }
-      .hero-pad { padding: 32px 20px 40px !important; }
-      .body-pad { padding: 28px 20px !important; }
-      .footer-pad { padding: 32px 20px 24px !important; }
-      .channel-col { display: block !important; width: 100% !important; padding: 0 0 10px 0 !important; }
-      .timer-cell { padding: 0 4px !important; }
-      .timer-box { width: 72px !important; height: 72px !important; }
-      .timer-number { font-size: 30px !important; }
-      .hero-title { font-size: 22px !important; }
+      .email-container {
+        width: 100% !important;
+      }
+
+      .hero-pad {
+        padding: 32px 20px 40px !important;
+      }
+
+      .body-pad {
+        padding: 28px 20px !important;
+      }
+
+      .footer-pad {
+        padding: 32px 20px 24px !important;
+      }
+
+      .channel-col {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 0 10px 0 !important;
+      }
+
+      .timer-cell {
+        padding: 0 4px !important;
+      }
+
+      .timer-box {
+        width: 72px !important;
+        height: 72px !important;
+      }
+
+      .timer-number {
+        font-size: 30px !important;
+      }
+
+      .hero-title {
+        font-size: 22px !important;
+      }
     }
   </style>
 </head>
+
 <body style="margin:0;padding:0;background-color:#f0f2f5;width:100%;">
 
-<div style="display:none;font-size:1px;color:#f0f2f5;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
-  Último aviso: el pedido #{{ params.order.entity_id }} podría cancelarse hoy si no recibimos tu comprobante
-</div>
+  <div
+    style="display:none;font-size:1px;color:#f0f2f5;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
+    Último aviso: el pedido #{{ params.order.entity_id }} podría cancelarse hoy si no recibimos tu comprobante
+  </div>
 
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f0f2f5;">
-<tr>
-<td align="center" style="padding:24px 12px;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f0f2f5;">
+    <tr>
+      <td align="center" style="padding:24px 12px;">
 
-<table class="email-container" width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="max-width:600px;width:100%;">
+        <table class="email-container" width="600" cellpadding="0" cellspacing="0" border="0" align="center"
+          style="max-width:600px;width:100%;">
 
-  <tr>
-    <td style="background-color:#193C6B;padding:18px 32px;">
-      <div style="border-radius:12px 12px 0 0;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td valign="middle">
-            <a href="{{ params.order.order_url }}" style="text-decoration:none;display:inline-block;">
-              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
-                   alt="Venus"
-                   width="110"
-                  
-                   style="display:block;border:0;height:auto;max-height:36px;width:auto;" />
-            </a>
-          </td>
-          <td align="right" valign="middle" style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.60);">
-            Calzado ecuatoriano desde 1938
-          </td>
-        </tr>
-      </table>
-      </div>
-    </td>
-  </tr>
+          <tr>
+            <td style="background-color:#193C6B;padding:18px 32px;">
+              <div style="border-radius:12px 12px 0 0;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td valign="middle">
+                      <a href="{{ params.order.order_url }}" style="text-decoration:none;display:inline-block;">
+                        <img
+                          src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
+                          alt="Venus" width="110"
+                          style="display:block;border:0;height:auto;max-height:36px;width:auto;" />
+                      </a>
+                    </td>
+                    <td align="right" valign="middle"
+                      style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.60);">
+                      Calzado ecuatoriano desde 1938
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
 
-  <tr>
-    <td class="hero-pad" style="background-color:#E0004D;padding:44px 32px 48px;text-align:center;">
-      <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 18px;">
-        <tr>
-          <td>
-            <div style="background-color:rgba(255,255,255,0.18);border-radius:24px;padding:8px 20px;">
-              <span style="display:inline-block;width:8px;height:8px;background-color:#ffffff;border-radius:50%;margin-right:8px;vertical-align:middle;"></span>
-              <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#ffffff;vertical-align:middle;">
-                Último aviso &middot; Día 7
-              </span>
-            </div>
-          </td>
-        </tr>
-      </table>
-
-      <p style="font-size:48px;margin:0 0 18px;line-height:1;">🚨</p>
-
-      <h1 class="hero-title" style="color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:700;margin:0 0 16px;line-height:1.2;">
-        Último aviso antes<br />de cancelar tu pedido
-      </h1>
-
-      <p style="color:rgba(255,255,255,0.88);font-family:Arial,Helvetica,sans-serif;font-size:15px;margin:0 auto 24px;line-height:1.7;max-width:430px;">
-        Han pasado 7 días y aún no recibimos tu comprobante.<br />
-        <strong style="color:#ffffff;">Tu pedido será cancelado si no actúas hoy.</strong>
-      </p>
-
-      <table cellpadding="0" cellspacing="0" border="0" align="center">
-        <tr>
-          <td>
-            <div style="background-color:rgba(255,255,255,0.18);border-radius:24px;padding:10px 22px;">
-              <span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;">
-                Pedido #{{ params.order.entity_id }} &middot; 7 días pendiente
-              </span>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-
-  <tr>
-    <td class="body-pad" style="background-color:#ffffff;padding:40px 32px;">
-
-      <div style="border:2px solid #fca5a5;background-color:#fff5f5;border-radius:10px;margin-bottom:28px;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="padding:20px 22px;text-align:center;">
-            <p style="font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:800;color:#991b1b;margin:0 0 10px;">
-              ⛔ Tu pedido se cancelará hoy
-            </p>
-            <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#7f1d1d;margin:0;line-height:1.6;">
-              Este es el último recordatorio. Si no enviamos tu comprobante de pago antes de hoy, el pedido <strong>#{{ params.order.entity_id }}</strong> será cancelado automáticamente.
-            </p>
-          </td>
-        </tr>
-      </table>
-      </div>
-
-      <div style="border:1px solid #fde68a;background-color:#fefce8;border-radius:10px;margin-bottom:28px;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="padding:18px 20px;">
-            <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#78350f;margin:0;line-height:1.7;">
-              Esperamos que estés teniendo un excelente día. Te contactamos para recordarte que <strong>aún no hemos recibido la confirmación de pago</strong> de tu pedido realizado en nuestra página web. Para nosotros es prioritario que recibas tu compra lo antes posible, por lo que te pedimos de favor <strong>adjuntar el comprobante</strong> para proceder con el envío.
-            </p>
-          </td>
-        </tr>
-      </table>
-      </div>
-
-      <p style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
-        Tu pedido vence hoy
-      </p>
-
-      <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px;">
-        <tr>
-          <td class="timer-cell" style="padding:0 10px;text-align:center;">
-            <div style="background-color:#193C6B;border-radius:10px;width:86px;height:86px;">
-              <table class="timer-box" cellpadding="0" cellspacing="0" border="0" width="86" height="86">
+          <tr>
+            <td class="hero-pad" style="background-color:#E0004D;padding:44px 32px 48px;text-align:center;">
+              <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 18px;">
                 <tr>
-                  <td style="text-align:center;vertical-align:middle;padding:12px;">
-                    <p class="timer-number" style="font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:800;color:#ffffff;margin:0;line-height:1;">00</p>
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:rgba(255,255,255,0.70);margin:4px 0 0;text-transform:uppercase;">Días</p>
+                  <td>
+                    <div style="background-color:rgba(255,255,255,0.18);border-radius:24px;padding:8px 20px;">
+                      <span
+                        style="display:inline-block;width:8px;height:8px;background-color:#ffffff;border-radius:50%;margin-right:8px;vertical-align:middle;"></span>
+                      <span
+                        style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#ffffff;vertical-align:middle;">
+                        Último aviso &middot; Día 7
+                      </span>
+                    </div>
                   </td>
                 </tr>
               </table>
-            </div>
-          </td>
-          <td style="font-family:Arial,Helvetica,sans-serif;font-size:28px;font-weight:800;color:#193C6B;padding-bottom:14px;vertical-align:middle;">:</td>
-          <td class="timer-cell" style="padding:0 10px;text-align:center;">
-            <div style="background-color:#193C6B;border-radius:10px;width:86px;height:86px;">
-              <table class="timer-box" cellpadding="0" cellspacing="0" border="0" width="86" height="86">
+
+              <p style="font-size:48px;margin:0 0 18px;line-height:1;">🚨</p>
+
+              <h1 class="hero-title"
+                style="color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:700;margin:0 0 16px;line-height:1.2;">
+                Último aviso antes<br />de cancelar tu pedido
+              </h1>
+
+              <p
+                style="color:rgba(255,255,255,0.88);font-family:Arial,Helvetica,sans-serif;font-size:15px;margin:0 auto 24px;line-height:1.7;max-width:430px;">
+                Han pasado 7 días y aún no recibimos tu comprobante.<br />
+                <strong style="color:#ffffff;">Tu pedido será cancelado si no actúas hoy.</strong>
+              </p>
+
+              <table cellpadding="0" cellspacing="0" border="0" align="center">
                 <tr>
-                  <td style="text-align:center;vertical-align:middle;padding:12px;">
-                    <p class="timer-number" style="font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:800;color:#ffffff;margin:0;line-height:1;">12</p>
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:rgba(255,255,255,0.70);margin:4px 0 0;text-transform:uppercase;">Horas</p>
+                  <td>
+                    <div style="background-color:rgba(255,255,255,0.18);border-radius:24px;padding:10px 22px;">
+                      <span
+                        style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;">
+                        Pedido #{{ params.order.entity_id }} &middot; 7 días pendiente
+                      </span>
+                    </div>
                   </td>
                 </tr>
               </table>
-            </div>
-          </td>
-          <td style="font-family:Arial,Helvetica,sans-serif;font-size:28px;font-weight:800;color:#193C6B;padding-bottom:14px;vertical-align:middle;">:</td>
-          <td class="timer-cell" style="padding:0 10px;text-align:center;">
-            <div style="background-color:#193C6B;border-radius:10px;width:86px;height:86px;">
-              <table class="timer-box" cellpadding="0" cellspacing="0" border="0" width="86" height="86">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="body-pad" style="background-color:#ffffff;padding:40px 32px;">
+
+              <div style="border:2px solid #fca5a5;background-color:#fff5f5;border-radius:10px;margin-bottom:28px;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding:20px 22px;text-align:center;">
+                      <p
+                        style="font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:800;color:#991b1b;margin:0 0 10px;">
+                        ⛔ Tu pedido se cancelará hoy
+                      </p>
+                      <p
+                        style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#7f1d1d;margin:0;line-height:1.6;">
+                        Este es el último recordatorio. Si no enviamos tu comprobante de pago antes de hoy, el pedido
+                        <strong>#{{ params.order.entity_id }}</strong> será cancelado automáticamente.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <div style="border:1px solid #fde68a;background-color:#fefce8;border-radius:10px;margin-bottom:28px;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding:18px 20px;">
+                      <p
+                        style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#78350f;margin:0;line-height:1.7;">
+                        Esperamos que estés teniendo un excelente día. Te contactamos para recordarte que <strong>aún no
+                          hemos recibido la confirmación de pago</strong> de tu pedido realizado en nuestra página web.
+                        Para nosotros es prioritario que recibas tu compra lo antes posible, por lo que te pedimos de
+                        favor <strong>adjuntar el comprobante</strong> para proceder con el envío.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <p
+                style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
+                Tu pedido vence hoy
+              </p>
+
+              <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px;">
                 <tr>
-                  <td style="text-align:center;vertical-align:middle;padding:12px;">
-                    <p class="timer-number" style="font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:800;color:#ffffff;margin:0;line-height:1;">00</p>
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:rgba(255,255,255,0.70);margin:4px 0 0;text-transform:uppercase;">Minutos</p>
+                  <td class="timer-cell" style="padding:0 10px;text-align:center;">
+                    <div style="background-color:#193C6B;border-radius:10px;width:86px;height:86px;">
+                      <table class="timer-box" cellpadding="0" cellspacing="0" border="0" width="86" height="86">
+                        <tr>
+                          <td style="text-align:center;vertical-align:middle;padding:12px;">
+                            <p class="timer-number"
+                              style="font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:800;color:#ffffff;margin:0;line-height:1;">
+                              00</p>
+                            <p
+                              style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:rgba(255,255,255,0.70);margin:4px 0 0;text-transform:uppercase;">
+                              Días</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                  <td
+                    style="font-family:Arial,Helvetica,sans-serif;font-size:28px;font-weight:800;color:#193C6B;padding-bottom:14px;vertical-align:middle;">
+                    :</td>
+                  <td class="timer-cell" style="padding:0 10px;text-align:center;">
+                    <div style="background-color:#193C6B;border-radius:10px;width:86px;height:86px;">
+                      <table class="timer-box" cellpadding="0" cellspacing="0" border="0" width="86" height="86">
+                        <tr>
+                          <td style="text-align:center;vertical-align:middle;padding:12px;">
+                            <p class="timer-number"
+                              style="font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:800;color:#ffffff;margin:0;line-height:1;">
+                              12</p>
+                            <p
+                              style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:rgba(255,255,255,0.70);margin:4px 0 0;text-transform:uppercase;">
+                              Horas</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                  <td
+                    style="font-family:Arial,Helvetica,sans-serif;font-size:28px;font-weight:800;color:#193C6B;padding-bottom:14px;vertical-align:middle;">
+                    :</td>
+                  <td class="timer-cell" style="padding:0 10px;text-align:center;">
+                    <div style="background-color:#193C6B;border-radius:10px;width:86px;height:86px;">
+                      <table class="timer-box" cellpadding="0" cellspacing="0" border="0" width="86" height="86">
+                        <tr>
+                          <td style="text-align:center;vertical-align:middle;padding:12px;">
+                            <p class="timer-number"
+                              style="font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:800;color:#ffffff;margin:0;line-height:1;">
+                              00</p>
+                            <p
+                              style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:rgba(255,255,255,0.70);margin:4px 0 0;text-transform:uppercase;">
+                              Minutos</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                   </td>
                 </tr>
               </table>
-            </div>
-          </td>
-        </tr>
-      </table>
 
-      <p style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
-        Tu pedido pendiente
-      </p>
+              <p
+                style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
+                Tu pedido pendiente
+              </p>
 
-      <div style="border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;margin-bottom:28px;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="padding:13px 18px;border-bottom:1px solid #f3f4f6;">
-            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7280;">Número de pedido</td>
-                <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#111827;font-weight:600;">#{{ params.order.entity_id }}</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:13px 18px;border-bottom:1px solid #f3f4f6;">
-            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7280;">Fecha</td>
-                <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#111827;font-weight:600;">{{ params.order.created_at }}</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:13px 18px;border-bottom:1px solid #f3f4f6;">
-            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7280;">Estado ⛔</td>
-                <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#E0004D;font-weight:700;">Vence hoy</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:13px 18px;border-bottom:1px solid #f3f4f6;">
-            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7280;">Método de pago</td>
-                <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#111827;font-weight:600;">{{ params.order.payment_method }}</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:16px 18px;background-color:#fafafa;">
-            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#111827;font-weight:700;">Total a pagar</td>
-                <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#E0004D;font-weight:800;">{{ params.order.currency }} ${{ params.order.grand_total|floatformat:2 }}</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-      </div>
-
-      <p style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
-        Envía tu comprobante ahora
-      </p>
-
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;">
-        <tr>
-          <td class="channel-col" width="50%" valign="top" style="padding-right:6px;">
-            <a href="mailto:venus@plasticaucho.com?subject=Comprobante%20pedido%20{{ params.order.entity_id }}" style="text-decoration:none;display:block;">
-              <div style="border:1px solid #e5e7eb;border-radius:10px;">
-              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <div style="border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;margin-bottom:28px;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding:13px 18px;border-bottom:1px solid #f3f4f6;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7280;">Número de
+                            pedido</td>
+                          <td align="right"
+                            style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#111827;font-weight:600;">
+                            #{{ params.order.entity_id }}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:13px 18px;border-bottom:1px solid #f3f4f6;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7280;">Fecha</td>
+                          <td align="right"
+                            style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#111827;font-weight:600;">
+                            {{ params.order.created_at }}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:13px 18px;border-bottom:1px solid #f3f4f6;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7280;">Estado ⛔</td>
+                          <td align="right"
+                            style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#E0004D;font-weight:700;">
+                            Vence hoy</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:13px 18px;border-bottom:1px solid #f3f4f6;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7280;">Método de
+                            pago</td>
+                          <td align="right"
+                            style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#111827;font-weight:600;">
+                            {{ params.order.payment_method }}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:16px 18px;background-color:#fafafa;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td
+                            style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#111827;font-weight:700;">
+                            Total a pagar</td>
+                          <td align="right"
+                            style="font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#E0004D;font-weight:800;">
+                            {{ params.order.currency }} ${{ params.order.grand_total|floatformat:2 }}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              {% if params.order.payment_method_code == "banktransfer" %}
+              <p
+                style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;color:#E0004D;margin:0 0 16px;">
+                Cuentas disponibles</p>
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
                 <tr>
-                  <td style="padding:16px 18px;">
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;color:#111827;margin:0 0 4px;">Email</p>
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;margin:0;">venus@plasticaucho.com</p>
+                  <td class="bank-col" width="50%" style="padding:0 5px 10px 0;">
+                    <div
+                      style="border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;font-family:Arial,Helvetica,sans-serif;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="42" valign="middle"><img
+                              src="https://img.mailinblue.com/10717983/images/content_library/original/6a048d17958112c68ca14b22.png"
+                              alt="Banco Pichincha" width="34" style="width:34px;height:auto;" /></td>
+                          <td valign="middle"><strong style="color:#0A1A3B;font-size:14px;">Banco
+                              Pichincha</strong><br /><span style="color:#9ca3af;font-size:12px;">Cuenta
+                              Corriente</span><br /><strong style="color:#193C6B;font-size:15px;">3145226304</strong>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                  <td class="bank-col" width="50%" style="padding:0 0 10px 5px;">
+                    <div
+                      style="border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;font-family:Arial,Helvetica,sans-serif;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="42" valign="middle"><img
+                              src="https://img.mailinblue.com/10717983/images/content_library/original/6a048d17a8bc670cd0bcb3ef.png"
+                              alt="Produbanco" width="34" style="width:34px;height:auto;" /></td>
+                          <td valign="middle"><strong
+                              style="color:#0A1A3B;font-size:14px;">Produbanco</strong><br /><span
+                              style="color:#9ca3af;font-size:12px;">Cuenta Corriente</span><br /><strong
+                              style="color:#193C6B;font-size:15px;">80013635</strong></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="bank-col" width="50%" style="padding:0 5px 10px 0;">
+                    <div
+                      style="border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;font-family:Arial,Helvetica,sans-serif;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="42" valign="middle"><img
+                              src="https://img.mailinblue.com/10717983/images/content_library/original/6a048d17b93850121399692d.png"
+                              alt="Banco del Pacifico" width="34" style="width:34px;height:auto;" /></td>
+                          <td valign="middle"><strong style="color:#0A1A3B;font-size:14px;">Banco del
+                              Pacifico</strong><br /><span style="color:#9ca3af;font-size:12px;">Cuenta
+                              Corriente</span><br /><strong style="color:#193C6B;font-size:15px;">600121</strong></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                  <td class="bank-col" width="50%" style="padding:0 0 10px 5px;">
+                    <div
+                      style="border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;font-family:Arial,Helvetica,sans-serif;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="42" valign="middle"><img
+                              src="https://img.mailinblue.com/10717983/images/content_library/original/6a048d17958112c68ca14b23.png"
+                              alt="Banco de Guayaquil" width="34" style="width:34px;height:auto;" /></td>
+                          <td valign="middle"><strong style="color:#0A1A3B;font-size:14px;">Banco de
+                              Guayaquil</strong><br /><span style="color:#9ca3af;font-size:12px;">Cuenta
+                              Corriente</span><br /><strong style="color:#193C6B;font-size:15px;">7182945</strong></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="bank-col" width="50%" style="padding:0 5px 10px 0;">
+                    <div
+                      style="border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;font-family:Arial,Helvetica,sans-serif;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="42" valign="middle"><img
+                              src="https://img.mailinblue.com/10717983/images/content_library/original/6a048d17ec3a397d991d081e.png"
+                              alt="Banco Internacional" width="34" style="width:34px;height:auto;" /></td>
+                          <td valign="middle"><strong style="color:#0A1A3B;font-size:14px;">Banco
+                              Internacional</strong><br /><span style="color:#9ca3af;font-size:12px;">Cuenta
+                              Corriente</span><br /><strong style="color:#193C6B;font-size:15px;">5000606974</strong>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                  <td class="bank-col" width="50%" style="padding:0 0 10px 5px;">
+                    <div
+                      style="border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;font-family:Arial,Helvetica,sans-serif;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="42" valign="middle"><img
+                              src="https://img.mailinblue.com/10717983/images/content_library/original/6a048d17cbc548937c57d223.png"
+                              alt="Banco Bolivariano" width="34" style="width:34px;height:auto;" /></td>
+                          <td valign="middle"><strong style="color:#0A1A3B;font-size:14px;">Banco
+                              Bolivariano</strong><br /><span style="color:#9ca3af;font-size:12px;">Cuenta
+                              Corriente</span><br /><strong style="color:#193C6B;font-size:15px;">1205009733</strong>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                   </td>
                 </tr>
               </table>
-            </div>
-            </a>
-          </td>
-          <td class="channel-col" width="50%" valign="top" style="padding-left:6px;">
-            <a href="https://wa.me/593987031150?text=Hola%2C%20env%C3%ADo%20mi%20comprobante%20del%20pedido%20{{ params.order.entity_id }}" style="text-decoration:none;display:block;">
-              <div style="border:1px solid #e5e7eb;border-radius:10px;">
-              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
                 <tr>
-                  <td style="padding:16px 18px;">
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;color:#111827;margin:0 0 4px;">WhatsApp</p>
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;margin:0;">098 703 1150</p>
+                  <td>
+                    <div
+                      style="background: #0A1A3B;border-radius:10px;padding:14px 16px;font-family:Arial,Helvetica,sans-serif;">
+                      <span style="font-size:14px;color:#e0004d;">Después de pagar: </span>
+                      <span style="font-size:14px;color:#9ca3af;">sube tu comprobante desde el botón de arriba para
+                        agilizar
+                        la confirmación de tu pedido.</span>
+
+                    </div>
                   </td>
                 </tr>
               </table>
-            </div>
-            </a>
-          </td>
-        </tr>
-      </table>
 
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="margin-bottom:10px;">
-        <tr>
-          <td align="center">
-            <a href="{{ params.order.order_url }}"
-               style="display:inline-block;background-color:#E0004D;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;padding:16px 44px;border-radius:50px;text-decoration:none;">
-              Enviar comprobante ahora &rarr;
-            </a>
-          </td>
-        </tr>
-      </table>
-      <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9ca3af;text-align:center;margin:0 0 28px;">
-        Incluye el número de pedido #{{ params.order.entity_id }}
-      </p>
+              {% endif %}
+              <p
+                style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
+                Envía tu comprobante ahora
+              </p>
 
-      <div style="border:1px solid #e5e7eb;border-radius:10px;background-color:#f9fafb;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="padding:20px 22px;">
-            <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#111827;margin:0 0 10px;">¿Qué pasa si se cancela mi pedido?</p>
-            <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#374151;margin:0;line-height:1.7;">
-              Si tu pedido es cancelado, podrás volver a realizar la compra en
-              <a href="{{ params.order.order_url }}" style="color:#193C6B;font-weight:700;text-decoration:none;">venus.com.ec</a>.
-              Si ya realizaste el pago pero no enviaste el comprobante, contáctanos de inmediato al
-              <a href="https://wa.me/593987031150" style="color:#193C6B;font-weight:700;text-decoration:none;">098 703 1150</a>
-              o a
-              <a href="mailto:venus@plasticaucho.com" style="color:#193C6B;font-weight:700;text-decoration:none;">venus@plasticaucho.com</a>
-              para resolver la situación.
-            </p>
-          </td>
-        </tr>
-      </table>
-      </div>
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;">
+                <tr>
+                  <td class="channel-col" width="50%" valign="top" style="padding-right:6px;">
+                    <a href="mailto:venus@plasticaucho.com?subject=Comprobante%20pedido%20{{ params.order.entity_id }}"
+                      style="text-decoration:none;display:block;">
+                      <div style="border:1px solid #e5e7eb;border-radius:10px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="padding:16px 18px;">
+                              <p
+                                style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;color:#111827;margin:0 0 4px;">
+                                Email</p>
+                              <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;margin:0;">
+                                venus@plasticaucho.com</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </a>
+                  </td>
+                  <td class="channel-col" width="50%" valign="top" style="padding-left:6px;">
+                    <a href="https://wa.me/593987031150?text=Hola%2C%20env%C3%ADo%20mi%20comprobante%20del%20pedido%20{{ params.order.entity_id }}"
+                      style="text-decoration:none;display:block;">
+                      <div style="border:1px solid #e5e7eb;border-radius:10px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="padding:16px 18px;">
+                              <p
+                                style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;color:#111827;margin:0 0 4px;">
+                                WhatsApp</p>
+                              <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;margin:0;">
+                                098 703 1150</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </a>
+                  </td>
+                </tr>
+              </table>
 
-    </td>
-  </tr>
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="margin-bottom:10px;">
+                <tr>
+                  <td align="center">
+                    <a href="{{ params.order.order_url }}"
+                      style="display:inline-block;background-color:#E0004D;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;padding:16px 44px;border-radius:50px;text-decoration:none;">
+                      Enviar comprobante ahora &rarr;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              <p
+                style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9ca3af;text-align:center;margin:0 0 28px;">
+                Incluye el número de pedido #{{ params.order.entity_id }}
+              </p>
 
-  <tr>
-    <td class="footer-pad" style="background-color:#0A1A3B;padding:36px 32px 28px;text-align:center;">
-      <div style="border-radius:0 0 12px 12px;">
-      <a href="{{ params.order.order_url }}" style="text-decoration:none;display:block;margin-bottom:8px;">
-        <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
-             alt="Venus" width="110"
-             style="display:block;margin:0 auto;border:0;max-height:36px;width:auto;" />
-      </a>
-      <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.55);margin:0 0 22px;line-height:1.5;">
-        Calzado ecuatoriano desde 1938
-      </p>
+              <div style="border:1px solid #e5e7eb;border-radius:10px;background-color:#f9fafb;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding:20px 22px;">
+                      <p
+                        style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#111827;margin:0 0 10px;">
+                        ¿Qué pasa si se cancela mi pedido?</p>
+                      <p
+                        style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#374151;margin:0;line-height:1.7;">
+                        Si tu pedido es cancelado, podrás volver a realizar la compra en
+                        <a href="{{ params.order.order_url }}"
+                          style="color:#193C6B;font-weight:700;text-decoration:none;">venus.com.ec</a>.
+                        Si ya realizaste el pago pero no enviaste el comprobante, contáctanos de inmediato al
+                        <a href="https://wa.me/593987031150"
+                          style="color:#193C6B;font-weight:700;text-decoration:none;">098 703 1150</a>
+                        o a
+                        <a href="mailto:venus@plasticaucho.com"
+                          style="color:#193C6B;font-weight:700;text-decoration:none;">venus@plasticaucho.com</a>
+                        para resolver la situación.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
 
-      <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 22px;">
-        <tr>
-          <td style="padding:0 4px;">
-            <a href="https://www.facebook.com/venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
-              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c7a289d644f86c98f.png" alt="Facebook" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
-            </a>
-          </td>
-          <td style="padding:0 4px;">
-            <a href="https://www.instagram.com/venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
-              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6e.png" alt="Instagram" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
-            </a>
-          </td>
-          <td style="padding:0 4px;">
-            <a href="https://www.tiktok.com/@venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
-              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6d.png" alt="TikTok" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
-            </a>
-          </td>
-          <td style="padding:0 4px;">
-            <a href="https://www.youtube.com/@venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
-              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c47b9790e32f53c35.png" alt="YouTube" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
-            </a>
-          </td>
-          <td style="padding:0 4px;">
-            <a href="https://twitter.com/venusecuador" style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
-              <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6c.png" alt="X" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
-            </a>
-          </td>
-        </tr>
-      </table>
+            </td>
+          </tr>
 
-      <p style="margin:0 0 14px;">
-        <a href="https://venus.com.ec/privacy-policy-cookie-restriction-mode" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Política de privacidad</a>
-        &middot;
-        <a href="https://venus.com.ec/devoluciones" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Devoluciones</a>
-        &middot;
-        <a href="https://venus.com.ec/terminos-de-compra" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Términos</a>
-        &middot;
-        <a href="https://venus.com.ec/faqs" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">FAQs</a>
-        &middot;
-        <a href="https://venus.com.ec/contacto" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Contáctanos</a>
-      </p>
+          <tr>
+            <td class="footer-pad" style="background-color:#0A1A3B;padding:36px 32px 28px;text-align:center;">
+              <div style="border-radius:0 0 12px 12px;">
+                <a href="{{ params.order.order_url }}" style="text-decoration:none;display:block;margin-bottom:8px;">
+                  <img
+                    src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
+                    alt="Venus" width="110" style="display:block;margin:0 auto;border:0;max-height:36px;width:auto;" />
+                </a>
+                <p
+                  style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.55);margin:0 0 22px;line-height:1.5;">
+                  Calzado ecuatoriano desde 1938
+                </p>
 
-      <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.45);line-height:1.8;margin:0 0 16px;">
-        Parque Industrial 4ta. Etapa, Panamericana Norte Km. 10 &middot; 03 500 3000<br />
-        venus@plasticaucho.com &middot; venus.com.ec
-      </p>
+                <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 22px;">
+                  <tr>
+                    <td style="padding:0 4px;">
+                      <a href="https://www.facebook.com/venusecuador"
+                        style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+                        <img
+                          src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c7a289d644f86c98f.png"
+                          alt="Facebook" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+                      </a>
+                    </td>
+                    <td style="padding:0 4px;">
+                      <a href="https://www.instagram.com/venusecuador"
+                        style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+                        <img
+                          src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6e.png"
+                          alt="Instagram" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+                      </a>
+                    </td>
+                    <td style="padding:0 4px;">
+                      <a href="https://www.tiktok.com/@venusecuador"
+                        style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+                        <img
+                          src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6d.png"
+                          alt="TikTok" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+                      </a>
+                    </td>
+                    <td style="padding:0 4px;">
+                      <a href="https://www.youtube.com/@venusecuador"
+                        style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+                        <img
+                          src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c47b9790e32f53c35.png"
+                          alt="YouTube" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+                      </a>
+                    </td>
+                    <td style="padding:0 4px;">
+                      <a href="https://twitter.com/venusecuador"
+                        style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;">
+                        <img
+                          src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6c.png"
+                          alt="X" width="34" height="34" style="display:block;margin:0 auto;border:0;" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
 
-      <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.40);line-height:1.8;margin:0;">
-        Recibiste este email porque tienes un pedido pendiente en venus.com.ec.<br />
-        <a href="{{ unsubscribe }}" style="color:rgba(255,255,255,0.55);text-decoration:underline;">Cancelar suscripción</a>
-      </p>
-      </div>
-    </td>
-  </tr>
+                <p style="margin:0 0 14px;">
+                  <a href="https://venus.com.ec/privacy-policy-cookie-restriction-mode"
+                    style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Política
+                    de privacidad</a>
+                  &middot;
+                  <a href="https://venus.com.ec/devoluciones"
+                    style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Devoluciones</a>
+                  &middot;
+                  <a href="https://venus.com.ec/terminos-de-compra"
+                    style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Términos</a>
+                  &middot;
+                  <a href="https://venus.com.ec/faqs"
+                    style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">FAQs</a>
+                  &middot;
+                  <a href="https://venus.com.ec/contacto"
+                    style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.60);text-decoration:none;margin:0 6px;">Contáctanos</a>
+                </p>
 
-</table>
+                <p
+                  style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.45);line-height:1.8;margin:0 0 16px;">
+                  Parque Industrial 4ta. Etapa, Panamericana Norte Km. 10 &middot; 03 500 3000<br />
+                  venus@plasticaucho.com &middot; venus.com.ec
+                </p>
 
-</td>
-</tr>
-</table>
+                <p
+                  style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.40);line-height:1.8;margin:0;">
+                  Recibiste este email porque tienes un pedido pendiente en venus.com.ec.<br />
+                  <a href="{{ unsubscribe }}" style="color:rgba(255,255,255,0.55);text-decoration:underline;">Cancelar
+                    suscripción</a>
+                </p>
+              </div>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
 
 </body>
+
 </html>

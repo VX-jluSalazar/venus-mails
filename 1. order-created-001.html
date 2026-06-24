@@ -5,15 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>¡Tu pedido está confirmado! — Venus</title>
-  <!--[if mso]>
-  <noscript>
-    <xml>
-      <o:OfficeDocumentSettings>
-        <o:PixelsPerInch>96</o:PixelsPerInch>
-      </o:OfficeDocumentSettings>
-    </xml>
-  </noscript>
-  <![endif]-->
+  
   <style type="text/css">
     /* ===== CLIENT RESETS ===== */
     body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
@@ -57,7 +49,6 @@
 <!-- ================================================================ -->
 <table class="email-container" width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="max-width:600px;width:100%;">
 
-
   <!-- ============================================================ -->
   <!-- HEADER -->
   <!-- ============================================================ -->
@@ -70,7 +61,7 @@
               <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
                    alt="Venus"
                    width="110"
-                   height="auto"
+                  
                    style="display:block;border:0;height:auto;max-height:36px;width:auto;" />
             </a>
           </td>
@@ -81,7 +72,6 @@
       </table>
     </td>
   </tr>
-
 
   <!-- ============================================================ -->
   <!-- HERO -->
@@ -94,14 +84,13 @@
         <tr>
           <td width="64" height="64" align="center" valign="middle"
               style="width:64px;height:64px;background-color:#22c55e;border-radius:50%;">
-            <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="height:64px;width:64px;v-text-anchor:middle;" arcsize="50%" filled="true" fillcolor="#22c55e" stroked="false"><w:anchorlock/><center style="color:#ffffff;font-family:Arial;font-size:24px;font-weight:bold;">✓</center></v:roundrect><![endif]-->
-            <!--[if !mso]><!-->
+            
+            
             <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png"
                  alt="✓" width="30" height="30"
-                 style="display:block;margin:0 auto;"
-                 onerror="this.style.display='none'" />
+                 style="display:block;margin:0 auto;" />
             <span style="display:none;font-family:Arial,sans-serif;font-size:28px;color:#ffffff;font-weight:bold;line-height:64px;">✓</span>
-            <!--<![endif]-->
+            
           </td>
         </tr>
       </table>
@@ -135,13 +124,11 @@
     </td>
   </tr>
 
-
   <!-- ============================================================ -->
   <!-- CUERPO PRINCIPAL -->
   <!-- ============================================================ -->
   <tr>
     <td class="body-pad" style="background-color:#ffffff;padding:36px 32px;">
-
 
       <!-- ── LABEL: PRODUCTOS ── -->
       <p style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
@@ -177,32 +164,32 @@
           <!-- Precio -->
           <td valign="top" align="right" style="padding:14px 14px 14px 0;vertical-align:top;white-space:nowrap;">
             {% if item.discount_amount > 0 %}
-            <table cellpadding="0" cellspacing="0" border="0" align="right">
-              <tr>
-                <td align="center" style="background-color:#E0004D;border-radius:20px;padding:2px 9px;margin-bottom:4px;display:block;">
-                  <span style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:#ffffff;">Oferta</span>
-                </td>
-              </tr>
-              <tr>
-                <td align="right" style="padding-top:4px;">
-                  <span style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#111827;">
-                    ${{ item.final_price|floatformat:2 }}
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td align="right">
-                  <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9ca3af;text-decoration:line-through;">
-                    ${{ item.price|floatformat:2 }}
-                  </span>
-                </td>
-              </tr>
-            </table>
-            {% else %}
-            <span style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#111827;">
-              ${{ item.final_price|floatformat:2 }}
-            </span>
-            {% endif %}
+<table cellpadding="0" cellspacing="0" border="0" align="right">
+  <tr>
+    <td align="center" style="background-color:#E0004D;border-radius:20px;padding:2px 9px;margin-bottom:4px;display:block;">
+      <span style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:#ffffff;">Oferta</span>
+    </td>
+  </tr>
+  <tr>
+    <td align="right" style="padding-top:4px;">
+      <span style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#111827;">
+        ${{ item.price|floatformat:2 }}
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <td align="right">
+      <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9ca3af;text-decoration:line-through;">
+        ${{ item.price|add:item.discount_amount|floatformat:2 }}
+      </span>
+    </td>
+  </tr>
+</table>
+{% else %}
+<span style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#111827;">
+  ${{ item.price|floatformat:2 }}
+</span>
+{% endif %}
           </td>
         </tr>
 
@@ -212,10 +199,8 @@
       </div>
       <!-- /TABLA PRODUCTOS -->
 
-
       <!-- ESPACIADO -->
       <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="32" style="height:32px;line-height:32px;font-size:32px;">&nbsp;</td></tr></table>
-
 
       <!-- ── LABEL: RESUMEN ── -->
       <p style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">
@@ -242,7 +227,7 @@
             <table width="100%" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7280;">Fecha</td>
-                <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#111827;font-weight:600;">{{ params.order.created_at|date:"j \d\e F, Y" }}</td>
+                <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#111827;font-weight:600;">{{ params.order.created_at }}</td>
               </tr>
             </table>
           </td>
@@ -349,10 +334,8 @@
       </table>
       {% endif %}
 
-
       <!-- ESPACIADO -->
       <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="32" style="height:32px;line-height:32px;font-size:32px;">&nbsp;</td></tr></table>
-
 
       <!-- ── LABEL: DIRECCIÓN DE ENVÍO ── -->
       <p style="color:#E0004D;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 14px;">
@@ -380,7 +363,6 @@
     </td>
   </tr>
 
-
   <!-- ============================================================ -->
   <!-- ¿QUÉ SIGUE? -->
   <!-- ============================================================ -->
@@ -395,18 +377,17 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;">
         <tr>
           <td width="44" valign="top" style="vertical-align:top;">
-            <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="height:36px;width:36px;v-text-anchor:middle;" arcsize="50%" filled="true" fillcolor="#E0004D" stroked="false"><w:anchorlock/><center style="color:#ffffff;font-family:Arial;font-size:16px;font-weight:bold;">✓</center></v:roundrect><![endif]-->
-            <!--[if !mso]><!-->
+            
+            
             <table cellpadding="0" cellspacing="0" border="0">
               <tr><td width="36" height="36" align="center" valign="middle"
                       style="width:36px;height:36px;background-color:#E0004D;border-radius:50%;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;color:#ffffff;text-align:center;line-height:36px;">
                 <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a7a289d644f86ca2a.png"
                  alt="✓" width="15" height="15"
-                 style="display:block;margin:0 auto;"
-                 onerror="this.style.display='none'" />
+                 style="display:block;margin:0 auto;" />
               </td></tr>
             </table>
-            <!--<![endif]-->
+            
           </td>
           <td valign="top" style="padding-left:12px;vertical-align:top;">
             <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#111827;margin:0 0 2px;line-height:1.3;">Pedido confirmado</p>
@@ -419,15 +400,15 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;">
         <tr>
           <td width="44" valign="top" style="vertical-align:top;">
-            <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="height:36px;width:36px;v-text-anchor:middle;" arcsize="50%" filled="true" fillcolor="#193C6B" stroked="false"><w:anchorlock/><center style="color:#ffffff;font-family:Arial;font-size:14px;font-weight:bold;">2</center></v:roundrect><![endif]-->
-            <!--[if !mso]><!-->
+            
+            
             <table cellpadding="0" cellspacing="0" border="0">
               <tr><td width="36" height="36" align="center" valign="middle"
                       style="width:36px;height:36px;background-color:#193C6B;border-radius:50%;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#ffffff;text-align:center;line-height:36px;">
                 2
               </td></tr>
             </table>
-            <!--<![endif]-->
+            
           </td>
           <td valign="top" style="padding-left:12px;vertical-align:top;">
             <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#111827;margin:0 0 2px;line-height:1.3;">Preparación</p>
@@ -440,15 +421,15 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;">
         <tr>
           <td width="44" valign="top" style="vertical-align:top;">
-            <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="height:36px;width:36px;v-text-anchor:middle;" arcsize="50%" filled="true" fillcolor="#193C6B" stroked="false"><w:anchorlock/><center style="color:#ffffff;font-family:Arial;font-size:14px;font-weight:bold;">3</center></v:roundrect><![endif]-->
-            <!--[if !mso]><!-->
+            
+            
             <table cellpadding="0" cellspacing="0" border="0">
               <tr><td width="36" height="36" align="center" valign="middle"
                       style="width:36px;height:36px;background-color:#193C6B;border-radius:50%;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#ffffff;text-align:center;line-height:36px;">
                 3
               </td></tr>
             </table>
-            <!--<![endif]-->
+            
           </td>
           <td valign="top" style="padding-left:12px;vertical-align:top;">
             <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#111827;margin:0 0 2px;line-height:1.3;">En camino</p>
@@ -461,15 +442,15 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td width="44" valign="top" style="vertical-align:top;">
-            <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="height:36px;width:36px;v-text-anchor:middle;" arcsize="50%" filled="true" fillcolor="#193C6B" stroked="false"><w:anchorlock/><center style="color:#ffffff;font-family:Arial;font-size:14px;font-weight:bold;">4</center></v:roundrect><![endif]-->
-            <!--[if !mso]><!-->
+            
+            
             <table cellpadding="0" cellspacing="0" border="0">
               <tr><td width="36" height="36" align="center" valign="middle"
                       style="width:36px;height:36px;background-color:#193C6B;border-radius:50%;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#ffffff;text-align:center;line-height:36px;">
                 4
               </td></tr>
             </table>
-            <!--<![endif]-->
+            
           </td>
           <td valign="top" style="padding-left:12px;vertical-align:top;">
             <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#111827;margin:0 0 2px;line-height:1.3;">Entrega</p>
@@ -481,30 +462,20 @@
     </td>
   </tr>
 
-
   <!-- ============================================================ -->
   <!-- CTA BUTTON -->
   <!-- ============================================================ -->
   <tr>
     <td style="background-color:#f9fafb;padding:24px 32px 36px;text-align:center;">
-      <!--[if mso]>
-      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
-        href="{{ params.order.order_url }}"
-        style="height:52px;v-text-anchor:middle;width:220px;"
-        arcsize="50%" filled="true" fillcolor="#E0004D" stroked="false">
-        <w:anchorlock/>
-        <center style="color:#ffffff;font-family:Arial;font-size:15px;font-weight:bold;">Ver mi pedido →</center>
-      </v:roundrect>
-      <![endif]-->
-      <!--[if !mso]><!-->
-      <a href="{{ params.order.order_url }}"
+      
+      
+      <a href="{{ params.source }}"
          style="display:inline-block;background-color:#E0004D;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;padding:16px 44px;border-radius:50px;text-decoration:none;mso-hide:all;">
         Ir a Venus &rarr;
       </a>
-      <!--<![endif]-->
+      
     </td>
   </tr>
-
 
   <!-- ============================================================ -->
   <!-- BENEFICIOS -->
@@ -523,8 +494,7 @@
                   <p style="margin:0 0 8px;">
                     <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8ac0930e7c61563ade.png"
                  alt="🚛" width="30" height="30"
-                 style="display:block;margin:0 auto;"
-                 onerror="this.style.display='none'" />
+                 style="display:block;margin:0 auto;" />
                   </p>
                   <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;color:#111827;margin:0 0 4px;">Envío a todo Ecuador</p>
                   <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;margin:0;line-height:1.5;">Entrega en la comodidad de tu hogar</p>
@@ -543,8 +513,7 @@
                   <p style="margin:0 0 8px;">
                     <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a47b9790e32f53cd8.png"
                  alt="🔄" width="30" height="30"
-                 style="display:block;margin:0 auto;"
-                 onerror="this.style.display='none'" />
+                 style="display:block;margin:0 auto;" />
                   </p>
                   <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;color:#111827;margin:0 0 4px;">Cambio de talla gratis</p>
                   <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;margin:0;line-height:1.5;">Si necesitas otra talla, te ayudamos</p>
@@ -563,8 +532,7 @@
                   <p style="margin:0 0 8px;">
                     <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe0c8a473b68ae535e2c28.png"
                  alt="💬" width="30" height="30"
-                 style="display:block;margin:0 auto;"
-                 onerror="this.style.display='none'" />               
+                 style="display:block;margin:0 auto;" />               
                   </p>
                   <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;color:#111827;margin:0 0 4px;">Soporte dedicado</p>
                   <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;margin:0;line-height:1.5;">03 500 3000 &middot; venus@plasticaucho.com</p>
@@ -579,7 +547,6 @@
     </td>
   </tr>
 
-
   <!-- ============================================================ -->
   <!-- FOOTER -->
   <!-- ============================================================ -->
@@ -589,7 +556,7 @@
       <!-- Logo -->
       <a href="{{ params.order.order_url }}" style="text-decoration:none;display:block;margin-bottom:8px;">
         <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe046c47b9790e32f53b38.png"
-             alt="Venus" width="110" height="auto"
+             alt="Venus" width="110"
              style="display:block;margin:0 auto;border:0;max-height:36px;width:auto;" />
       </a>
       <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.55);margin:0 0 22px;line-height:1.5;">
@@ -604,7 +571,7 @@
             <a href="https://www.facebook.com/venusecuador"
                style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;font-family:Arial,sans-serif;font-size:14px;color:#ffffff;">
               <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c7a289d644f86c98f.png"
-             alt="Venus" width="110" height="auto"
+             alt="Venus" width="110"
              style="display:block;margin:0 auto;border:0;max-height:36px;width:auto;" />
             </a>
           </td>
@@ -613,7 +580,7 @@
             <a href="https://www.instagram.com/venusecuador"
                style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;font-family:Arial,sans-serif;font-size:13px;color:#ffffff;">
               <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6e.png"
-             alt="Venus" width="110" height="auto"
+             alt="Venus" width="110"
              style="display:block;margin:0 auto;border:0;max-height:36px;width:auto;" />
             </a>
           </td>
@@ -622,7 +589,7 @@
             <a href="https://www.tiktok.com/@venusecuador"
                style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;font-family:Arial,sans-serif;font-size:12px;color:#ffffff;">
               <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6d.png"
-             alt="Venus" width="110" height="auto"
+             alt="Venus" width="110"
              style="display:block;margin:0 auto;border:0;max-height:36px;width:auto;" />
             </a>
           </td>
@@ -631,7 +598,7 @@
             <a href="https://www.youtube.com/@venusecuador"
                style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;font-family:Arial,sans-serif;font-size:12px;color:#ffffff;">
               <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c47b9790e32f53c35.png"
-             alt="Venus" width="110" height="auto"
+             alt="Venus" width="110"
              style="display:block;margin:0 auto;border:0;max-height:36px;width:auto;" />
             </a>
           </td>
@@ -640,7 +607,7 @@
             <a href="https://twitter.com/venusecuador"
                style="display:inline-block;width:34px;height:34px;background-color:rgba(255,255,255,0.12);border-radius:50%;text-align:center;line-height:34px;text-decoration:none;font-family:Arial,sans-serif;font-size:13px;color:#ffffff;">
               <img src="https://img.mailinblue.com/10717983/images/content_library/original/69fe092c473b68ae535e2b6c.png"
-             alt="Venus" width="110" height="auto"
+             alt="Venus" width="110"
              style="display:block;margin:0 auto;border:0;max-height:36px;width:auto;" />
             </a>
           </td>
@@ -674,7 +641,6 @@
 
     </td>
   </tr>
-
 
 </table>
 <!-- /CONTENEDOR PRINCIPAL -->
